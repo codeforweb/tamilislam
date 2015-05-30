@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<head>
+<style>
+body {
+ margin: 0 auto;
+ position: relative;
+ font-family:"Trebuchet MS", Helvetica, Arial, sans-serif;
+ font-size:12px;
+ color: #fff;
+ line-height: auto;
+ text-shadow: 1px 1px 5px #000;
+ 
+   background-color: #000;
+  -webkit-background-size: 36px 36px;
+ -moz-background-size: 36px 36px;
+ background-size: 36px 36px;
+ background-position: fixed;}
+
+html {height: 100%;}
+
+ ::-webkit-scrollbar{width: 2px;}
+ ::-webkit-scrollbar-track{background-color:#fff;}
+ ::-webkit-scrollbar-thumb{background-color:#fff;}
+
+a{ color:#fff;font-family:"Trebuchet MS", Helvetica, Arial, sans-serif; text-shadow: 1px 1px 5px #000;}
+
+.container {
+ display: -webkit-flex; display: -ms-flexbox; display: flex;
+ -webkit-flex-flow: column; -ms-flex-direction: column; flex-flow: column;
+margin:0 auto; height:100%;
+ padding: 0% 1%;}
+
+header, footer {
+	text-align: center;
+ -webkit-flex: 0 0 auto; -ms-flex: 0 0 auto; flex: 0 0 auto;
+ background: rgba(153, 0, 102, .5);} /* Violet */
+
+header:hover, footer:hover {  
+-webkit-transition: background 0.35s ease-in-out; 
+ -moz-transition: background 0.35s ease-in-out; 
+ -o-transition: background 0.35s ease-in-out; 
+ -ms-transition: background 0.35s ease-in-out;
+  transition: background 0.35s ease-in-out;
+ background: rgba(153, 0, 102, .7); } /* Violet */
+
+nav {
+ display:block;
+ -webkit-flex: 0 0 auto; -ms-flex: 0 0 auto; flex: 0 0 auto;
+ background: rgba(16, 122, 103, .5); } /* Teal */
+
+nav:hover {  
+-webkit-transition: background 0.35s ease-in-out; 
+ -moz-transition: background 0.35s ease-in-out; 
+ -o-transition: background 0.35s ease-in-out; 
+ -ms-transition: background 0.35s ease-in-out;
+  transition: background 0.35s ease-in-out;
+ background: rgba(16, 122, 103, .7); } /* Teal */
+
+section {	
+ -webkit-flex: 4 1 auto; -ms-flex: 4 1 auto; flex: 4 1 auto;
+ display: -webkit-flex; display: -ms-flexbox; display: flex;
+ -webkit-flex-flow: row; -ms-flex-direction: row; flex-flow: row;
+ -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap;  flex-wrap: wrap;}
+
+article {
+ -webkit-flex: 0 1 auto; -ms-flex: 0 1 auto; flex: 0 1 auto;
+ -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap;  flex-wrap: wrap;
+ width: 33%; height:auto;}
+
+article:nth-of-type(5n+1) {
+    -webkit-order: 0; -ms-flex-order: 0; order: 0;
+    -webkit-flex: 0 1 auto;-ms-flex: 0 1 auto; flex: 0 1 auto;
+    -webkit-align-self: auto; -ms-flex-item-align: auto; align-self: auto;
+    background: rgba(205, 7, 40, .5);} /* Berry */
+
+article:nth-of-type(5n+2) {
+    -webkit-order: 0; -ms-flex-order: 0; order: 0;
+    -webkit-flex: 0 1 auto;-ms-flex: 0 1 auto; flex: 0 1 auto;
+    -webkit-align-self: auto; -ms-flex-item-align: auto; align-self: auto;
+    background: rgba(237, 117, 20, .5);} /* Orange */
+
+article:nth-of-type(5n+3) {
+    -webkit-order: 0; -ms-flex-order: 0; order: 0;
+    -webkit-flex: 0 1 auto;-ms-flex: 0 1 auto; flex: 0 1 auto;
+    -webkit-align-self: auto; -ms-flex-item-align: auto; align-self: auto;
+    background: rgba(199, 177, 29, .5);} /* Yellow */
+
+article:nth-of-type(5n+4) {
+    -webkit-order: 0; -ms-flex-order: 0; order: 0;
+    -webkit-flex: 0 1 auto;-ms-flex: 0 1 auto; flex: 0 1 auto;
+    -webkit-align-self: auto; -ms-flex-item-align: auto; align-self: auto;
+    background: rgba(77, 159, 74, .5);} /* Green */
+
+article:nth-of-type(5n+5) {
+    -webkit-order: 0; -ms-flex-order: 0; order: 0;
+    -webkit-flex: 0 1 auto;-ms-flex: 0 1 auto; flex: 0 1 auto;
+    -webkit-align-self: auto; -ms-flex-item-align: auto; align-self: auto;
+    background: rgba(16, 122, 103, .5);} /* Teal */
+
+article:nth-of-type(5n+1):hover {
+ -webkit-transition: background 0.35s ease-in-out; 
+ -moz-transition: background 0.35s ease-in-out; 
+ -o-transition: background 0.35s ease-in-out; 
+ -ms-transition: background 0.35s ease-in-out;
+  transition: background 0.35s ease-in-out;
+    background: rgba(205, 7, 40, .7);} /* Berry */
+
+article:nth-of-type(5n+2):hover {
+ -webkit-transition: background 0.35s ease-in-out; 
+ -moz-transition: background 0.35s ease-in-out; 
+ -o-transition: background 0.35s ease-in-out; 
+ -ms-transition: background 0.35s ease-in-out;
+  transition: background 0.35s ease-in-out;
+    background: rgba(237, 117, 20, .7);} /* Orange */
+
+article:nth-of-type(5n+3):hover {
+ -webkit-transition: background 0.35s ease-in-out; 
+ -moz-transition: background 0.35s ease-in-out; 
+ -o-transition: background 0.35s ease-in-out; 
+ -ms-transition: background 0.35s ease-in-out;
+  transition: background 0.35s ease-in-out;
+    background: rgba(199, 177, 29, .7);} /* Yellow */
+
+article:nth-of-type(5n+4):hover {
+ -webkit-transition: background 0.35s ease-in-out; 
+ -moz-transition: background 0.35s ease-in-out; 
+ -o-transition: background 0.35s ease-in-out; 
+ -ms-transition: background 0.35s ease-in-out;
+  transition: background 0.35s ease-in-out;
+    background: rgba(77, 159, 74, .7);} /* Green */
+
+article:nth-of-type(5n+5):hover {
+ -webkit-transition: background 0.35s ease-in-out; 
+ -moz-transition: background 0.35s ease-in-out; 
+ -o-transition: background 0.35s ease-in-out; 
+ -ms-transition: background 0.35s ease-in-out;
+  transition: background 0.35s ease-in-out;
+    background: rgba(16, 122, 103, .7);} /* Teal */
+
+p {margin: 1px 2px;}
+
+@media screen and (max-width:1024px){article{width:33%;} article:nth-of-type(3n+2){width:34%;}} /* To equal 100% */
+
+@media screen and (max-width:720px){article{width: 50%;} article:nth-of-type(3n+2){width:50%;}}
+
+@media handheld and (orientation: portrait) {article{width:100%;} article:nth-of-type(3n+2){width:100%;}}
+
+@media handheld and (orientation: landscape) {article{width:100%;} article:nth-of-type(3n+2){width:100%;}}
+
+@media screen and (orientation: portrait) {article{width:100%;} article:nth-of-type(3n+2){width:100%;}}
+
+dd {margin-bottom:10px;}
+
+</style>
+</head>
+<body>
+<div class="container">
+<header><h1>குர் ஆன் ஹதீஸ் தொகுப்புகள்</h1></header>
+<!--nav>
+<p>
+<a href="javascript:void(0);">Page One</a> 
+<a href="javascript:void(0);">Page Two</a>
+<a href="javascript:void(0);">Page Three</a> 
+<a href="javascript:void(0);">Page Four</a></p>
+</nav-->
+<section>
+
+<article>
+<h2>குர்ஆன்</h2>
+ <dl>
+	<dt><a href="http://codeforweb.github.io/alquran/alltrans/" target="main">குர்ஆன்</a></dt> 
+		<dd> குர்ஆன் மொழிபெயர்புகள் பல உள்ளன. இருப்பினும் ஸஹாபாக்கள், தஆபீன் மற்றும் தஆபா தஆபீனின்  புரிதலின் அடிப்படையில் உள்ள மொழி பெயர்புகள் சொற்பமே. இந்த தொகுப்பு ஆங்கிலத்தில் முஹ்ஸின் கான், ஸஹீஹ் இன்டர்நேஷனல், தமிழில் அப்துல் ஹமீது பாகவி மற்றும் ஜான் டிரஸ்ட் - ஒரே பக்கத்தில்</dd>
+</dl> 
+</article>
+
+<article>
+<h2>ஹதீஸ்</h2>
+ <dl>
+	<dt><a href="pages/hadith/40Tamil.html" target="main">நவவி 40</a></dt> 
+		<dd> இமாம் நவவி (ரஹ்) அவர்களால் தொகுக்கப்பட்ட ஹதீஸுகள்</dd>
+</dl> 
+</article>
+
+<article>
+<h2>அகீதா</h2>
+ <dl>
+	<dt><a href="pages/aqeeda/aqeeda_tahaviyya.html" target="main">அகீதா- அஹ்லுல் சுன்னா வல் ஜமா</a></dt> 
+		<dd>இமாம் அத்தஹாவீ அவர்களால் தொகுகப்பட்ட நூல்</dd>
+
+	<dt><a href="pages/aqeeda/99.html" target="main">அல்லாஹ்வின் அழகிய திருப்பெயர்கள்</a></dt> 
+		<dd>குர்ஆன் ஆயத்துகளுடன்</dd>
+		
+		
+</dl> 
+</article>
+
+<article>
+<h2>பிரார்தணை </h2>
+ <dl>
+ 	<dt><a href="pages/dua/general1.html" target="main">பொதுவானவை -1</a></dt> 
+		<dd>தினமும் செய்யும்  பிரார்தணை - Print செய்து ஒட்டி கொள்ள</dd>
+ 	<dt><a href="pages/dua/general2.html" target="main">பொதுவானவை -2</a></dt> 
+		<dd>Print செய்து ஒட்டி கொள்ள</dd>
+	<dt><a href="pages/dua/nochild.html" target="main">குழந்தை வேண்டி செய்ய வேண்டிய பிரார்தணை</a></dt> 
+		<dd> குழந்தை வேண்டி செய்ய வேண்டிய பிரார்தணை</dd>		
+	<dt><a href="pages/dua/ruqyah.html" target="main">ஓதிபார்க்க - ருகியா</a></dt> 
+		<dd> ஓதிபார்க்க - பிரார்தணை</dd>		
+</dl> 
+</article>
+
+</section>
+<footer><p>&copy; எல்லொருக்கும்</p></footer>
+</div>
+</body>
+</html>
