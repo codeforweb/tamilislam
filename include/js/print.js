@@ -2,6 +2,8 @@
 	for(var i=0,j=nodes.length;i<j;i++){
 		node = nodes[i];
 		node.style.fontFamily = "Meezan";
+		var tagname = node.tagName!='h1'
+		if(tagname!='h1' &&  tagname!='h2' &&  tagname!='h3' &&  tagname!='h4' &&  tagname!='h5' &&  tagname!='h6')
 		node.style.fontSize = fontSize;
 		node.innerHTML = unicode2meezan(node.innerHTML);
 	}
