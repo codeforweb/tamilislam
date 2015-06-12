@@ -54,7 +54,21 @@
 		</span>
 	</div>	
 
-</div>
+	</div> <!-- container div -->
+	<script src="../../include/js/print.js"></script>
+	<script>
+		var string = "" + unescape(location.search);
+		var pairs = string.split('&'), nameVal = new Array();
+		nameVal = pairs[0].split('=');
+		print = escape(nameVal[0]);
+		if(typeof print!='undefined' && print!=''){
+			var uffTamil = document.querySelectorAll('.title, .meaning');
+			setTimeout(function(){
+				convertNprint(uffTamil, '15px')
+			},200);
+		}
+		// E N D  F U N C T I O N	
+    </script>	
 
 </body>
 
