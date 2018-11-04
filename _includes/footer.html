@@ -1,0 +1,14 @@
+      <footer>
+          &copy; {{ site.time | date: '%Y' }}. எல்லொருக்கும்
+      </footer>
+
+      <script type="text/javascript">
+      	console.log(document.getElementById('sidebutton'))
+      document.getElementById('sidebutton').onclick = function(e){
+   		var element = document.getElementsByClassName("content")[0];
+    	element.classList.toggle("isOpen");
+    	return false;
+
+      }
+
+      </script>

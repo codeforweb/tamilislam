@@ -1,37 +1,14 @@
-﻿<!doctype html>
-<head>
-<title>99 Names</title>
-<style>
-body{text-align:center}
-#container{width: 1028px; margin:0 auto; text-align:left ;overflow:hidden}
-.tamil {font-size: 10pt;line-height : 1.6em }
-.tamil1 {font-size: 10pt;line-height : 1.6em }
-.arabic {text-align: right; direction: rtl; unicode-bidi: embed;font-size: 25px;}
-.arabic1 {font-size: 18px;}
-.notes li{border:0px;font-size: 8pt;}
-.hide{display:none}
-.show{display:block}
+---
+title: 99 Names
+layout: subdir
+---
 
-h1{font-size:13px;}
-h2{font-size:12px;}
-table th,td {border:solid 1px #fab;}
-@media print{
-/*
-	margin:0;padding:0px;
-	table {border-collapse:collapse; table-layout:fixed;}
-	table td {border:solid 1px #fab; width:100px; word-wrap:break-word;}
-*/	
-}
-</style>
-</head>
-<body>
-<div id='container'>
 <p>بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ </p>
 <p class="tamil">பொங்கும் கருணையாளன், தொடர் கிருபையாளனாகிய அல்லாஹ்வின் திருப்பெயரால் </p>
 <p>لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ بِيَدِهِ الْخَيْرُ وَهُوَ عَلَى كُلِّ شَىْءٍ قَدِيرٌ لاَ إِلَهَ إِلاَّ اللَّهُ لَهُ الأَسْمَاءُ الْحُسْنَى </p>
  <p>هُوَ اللَّهُ الَّذِي لاَ إِلَهَ إِلاَّ هُوَ </p>
 
-<table border="1px">
+ <table border="1px">
 	<caption class="tamil">அழகிய திருப்பெயர்கள்</caption>
 	<tr>
 		<th>Si No</th><th>அரபி </th> <th>Transliteration</th><th>மொழியாக்கம்</th><th>பயன்பாடு</th>
@@ -1094,25 +1071,5 @@ table th,td {border:solid 1px #fab;}
 	அல்குர்ஆனை என் இதயத்தின் வசந்தமாக்குவாயாக! என் நெஞ்சத்தின் ஒளியாக்குவாயாக! எனது துயரத்தை நீக்கக்கூடியதாகவும் எனது கவலையை மறைக்கக் கூடியதாகவும் ஆக்குவாயாக!
 	நூல்: அஹ்மது 1/391	
 </p>
-	
-</div>
 
-	<script src="../../include/js/print.js"></script>
-	<script>
-		//Convert to meezan font and print
-		//e.g. /99.html?print
 
-		var string = "" + unescape(location.search);
-		var pairs = string.split('&'), nameVal = new Array();
-		nameVal = pairs[0].split('=');
-		print = escape(nameVal[0]);
-		if(typeof print!='undefined' && print!=''){
-			var uffTamil = document.querySelectorAll('.tamil');
-			setTimeout(function(){
-				convertNprint(uffTamil,'13px');
-			},200);
-		}
-		// E N D  F U N C T I O N	
-	</script>	
-</body>
-</html>
