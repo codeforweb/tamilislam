@@ -149,3 +149,25 @@ table th,td {border:solid 1px #fab;}
 */	
 }
 #container{width: 900px;}
+
+#tblcontainer {
+    display: table;
+     padding: 5px;
+     width: 700px;
+    }
+
+  .tblrow  {
+      display: table-row;
+      padding: 5px;
+    }
+    .tblhead    { 
+      display: table-header-group 
+    }
+
+  .left, .right, .middle {
+      display: table-cell;
+      padding: 5px;
+      width: 150px;
+      border: #000000 solid 1px;
+      margin: 5px;      
+    }

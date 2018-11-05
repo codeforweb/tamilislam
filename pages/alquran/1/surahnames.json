@@ -1,0 +1,688 @@
+{
+    "surahnames": [
+        {
+            "ID": "1",
+            "surano": "1",
+            "Name": "الْفَاتِحَة",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "2",
+            "surano": "2",
+            "Name": "الْبَقَرَة",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "3",
+            "surano": "3",
+            "Name": "آل عِمْرَان",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "4",
+            "surano": "4",
+            "Name": "النِّسَآء",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "5",
+            "surano": "5",
+            "Name": "الْمَآئِدَة",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "6",
+            "surano": "6",
+            "Name": "الْأَنْعَام",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "7",
+            "surano": "7",
+            "Name": "الْأَعْرَاف",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "8",
+            "surano": "8",
+            "Name": "الْأَنْفَال",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "9",
+            "surano": "9",
+            "Name": "التَّوْبَة",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "10",
+            "surano": "10",
+            "Name": "يُوْنـُس",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "11",
+            "surano": "11",
+            "Name": "هُوْد",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "12",
+            "surano": "12",
+            "Name": "يُوْسُف",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "13",
+            "surano": "13",
+            "Name": "الرَّعْد",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "14",
+            "surano": "14",
+            "Name": "إِبْرَاهِيْم",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "15",
+            "surano": "15",
+            "Name": "الْحِجْر",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "16",
+            "surano": "16",
+            "Name": "النَّحْل",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "17",
+            "surano": "17",
+            "Name": "الْإِسْرَاء - - بَنِيْ إِسْرَآءِيْل",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "18",
+            "surano": "18",
+            "Name": "الْكَهْف",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "19",
+            "surano": "19",
+            "Name": "مَرْيَم",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "20",
+            "surano": "20",
+            "Name": "طهٰ",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "21",
+            "surano": "21",
+            "Name": "الْأَنْبِيَآء",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "22",
+            "surano": "22",
+            "Name": "الْحَجّ",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "23",
+            "surano": "23",
+            "Name": "الْمُؤْمِنُوْن",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "24",
+            "surano": "24",
+            "Name": "النُّوْر",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "25",
+            "surano": "25",
+            "Name": "الْفُرْقَان",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "26",
+            "surano": "26",
+            "Name": "الشُّعَرَآء",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "27",
+            "surano": "27",
+            "Name": "النَّمْل",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "28",
+            "surano": "28",
+            "Name": "الْقَصَص",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "29",
+            "surano": "29",
+            "Name": "الْعَنْکَبُوْت",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "30",
+            "surano": "30",
+            "Name": "الرُّوْم",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "31",
+            "surano": "31",
+            "Name": "لُقْمَان",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "32",
+            "surano": "32",
+            "Name": "السَّجْدَة",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "33",
+            "surano": "33",
+            "Name": "الْأَحْزَاب",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "34",
+            "surano": "34",
+            "Name": "سَبـَا",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "35",
+            "surano": "35",
+            "Name": "فَاطِر",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "36",
+            "surano": "36",
+            "Name": "يٰس",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "37",
+            "surano": "37",
+            "Name": "الصَّافَّات",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "38",
+            "surano": "38",
+            "Name": "ص",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "39",
+            "surano": "39",
+            "Name": "الزُّمَر",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "40",
+            "surano": "40",
+            "Name": "غَافِر - الْمُؤْمِن",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "41",
+            "surano": "41",
+            "Name": "فُصِّلَت - حٰم السَّجْدَة",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "42",
+            "surano": "42",
+            "Name": "الشُّوْرٰی",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "43",
+            "surano": "43",
+            "Name": "الزُّخْرُف",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "44",
+            "surano": "44",
+            "Name": "الدُّخَان",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "45",
+            "surano": "45",
+            "Name": "الْجَاثِيَة",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "46",
+            "surano": "46",
+            "Name": "الْأَحْقَاف",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "47",
+            "surano": "47",
+            "Name": "مُحَمَّد",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "48",
+            "surano": "48",
+            "Name": "الْفَتْح",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "49",
+            "surano": "49",
+            "Name": "الْحُجُرَات",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "50",
+            "surano": "50",
+            "Name": "ق",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "51",
+            "surano": "51",
+            "Name": "الذَّارِيَات",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "52",
+            "surano": "52",
+            "Name": "الطُّوْر",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "53",
+            "surano": "53",
+            "Name": "النَّجْم",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "54",
+            "surano": "54",
+            "Name": "الْقَمَر",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "55",
+            "surano": "55",
+            "Name": "الرَّحْمٰن",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "56",
+            "surano": "56",
+            "Name": "الْوَاقِعَة",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "57",
+            "surano": "57",
+            "Name": "الْحَدِيْد",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "58",
+            "surano": "58",
+            "Name": "الْمُجَادَلَة",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "59",
+            "surano": "59",
+            "Name": "الْحَشْر",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "60",
+            "surano": "60",
+            "Name": "الْمُمْتَحِنَة",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "61",
+            "surano": "61",
+            "Name": "الصَّفّ",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "62",
+            "surano": "62",
+            "Name": "الْجُمُعَة",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "63",
+            "surano": "63",
+            "Name": "الْمُنَافِقُوْن",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "64",
+            "surano": "64",
+            "Name": "التَّغَابُن",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "65",
+            "surano": "65",
+            "Name": "الطَّلاَق",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "66",
+            "surano": "66",
+            "Name": "التَّحْرِيْم",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "67",
+            "surano": "67",
+            "Name": "الْمُلْک",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "68",
+            "surano": "68",
+            "Name": "الْقَلَم",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "69",
+            "surano": "69",
+            "Name": "الْحَآقَّة",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "70",
+            "surano": "70",
+            "Name": "الْمَعَارِج",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "71",
+            "surano": "71",
+            "Name": "نُوْح",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "72",
+            "surano": "72",
+            "Name": "الْجِنّ",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "73",
+            "surano": "73",
+            "Name": "الْمُزَّمِّل",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "74",
+            "surano": "74",
+            "Name": "الْمُدَّثِّر",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "75",
+            "surano": "75",
+            "Name": "الْقِيَامَة",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "76",
+            "surano": "76",
+            "Name": "الْإِنْسَان - الدَّهْر",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "77",
+            "surano": "77",
+            "Name": "الْمُرْسَلاَت",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "78",
+            "surano": "78",
+            "Name": "النَّبَا",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "79",
+            "surano": "79",
+            "Name": "النَّازِعَات",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "80",
+            "surano": "80",
+            "Name": "عَبَسَ",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "81",
+            "surano": "81",
+            "Name": "التَّکْوِيْر",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "82",
+            "surano": "82",
+            "Name": "الْإِنْفِطَار",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "83",
+            "surano": "83",
+            "Name": "الْمُطَفِّفِيْن",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "84",
+            "surano": "84",
+            "Name": "الْإِنْشِقَاق",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "85",
+            "surano": "85",
+            "Name": "الْبُرُوْج",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "86",
+            "surano": "86",
+            "Name": "الطَّارِق",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "87",
+            "surano": "87",
+            "Name": "الْأَعْلیٰ",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "88",
+            "surano": "88",
+            "Name": "الْغَاشِيَة",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "89",
+            "surano": "89",
+            "Name": "الْفَجْر",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "90",
+            "surano": "90",
+            "Name": "الْبَلَد",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "91",
+            "surano": "91",
+            "Name": "الشَّمْس",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "92",
+            "surano": "92",
+            "Name": "اللَّيْل",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "93",
+            "surano": "93",
+            "Name": "الضُّحٰی",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "94",
+            "surano": "94",
+            "Name": "الشَّرْح - - الْإِنْشِرَاح",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "95",
+            "surano": "95",
+            "Name": "التِّيْن",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "96",
+            "surano": "96",
+            "Name": "الْعَلَق",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "97",
+            "surano": "97",
+            "Name": "الْقَدْر",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "98",
+            "surano": "98",
+            "Name": "الْبَـيِّـنَة",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "99",
+            "surano": "99",
+            "Name": "الزَّلْزَلَة - - الزِّلْزَال",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "100",
+            "surano": "100",
+            "Name": "الْعَادِيَات",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "101",
+            "surano": "101",
+            "Name": "الْقَارِعَة",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "102",
+            "surano": "102",
+            "Name": "التَّکَاثُر",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "103",
+            "surano": "103",
+            "Name": "الْعَصْر",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "104",
+            "surano": "104",
+            "Name": "الْهُمَزَة",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "105",
+            "surano": "105",
+            "Name": "الْفِيل",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "106",
+            "surano": "106",
+            "Name": "قُرَيْش",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "107",
+            "surano": "107",
+            "Name": "الْمَاعُوْن",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "108",
+            "surano": "108",
+            "Name": "الْکَوْثَر",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "109",
+            "surano": "109",
+            "Name": "الْکَافِرُوْن",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "110",
+            "surano": "110",
+            "Name": "النَّصْر",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "111",
+            "surano": "111",
+            "Name": "الْمَسَد - - اللَّهَب",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "112",
+            "surano": "112",
+            "Name": "الْإِخْلاَص",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "113",
+            "surano": "113",
+            "Name": "الْفَلَق",
+            "DatabaseID": "1"
+        },
+        {
+            "ID": "114",
+            "surano": "114",
+            "Name": "النَّاس",
+            "DatabaseID": "1"
+        }
+    ]
+}

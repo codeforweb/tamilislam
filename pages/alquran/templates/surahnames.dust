@@ -1,0 +1,4 @@
+
+{#surahnames}
+    <tr><td><a href="1.html">{.surano}</a></td><td align="left"><a href="1.html">{.Name}</a></td></tr>
+{/surahnames}

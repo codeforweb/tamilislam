@@ -1,0 +1,62 @@
+---
+title: Surah Names
+layout: default
+---
+
+<div id='container'>
+	<h2 id="name"></h2>
+	<h3 id="translator"></h3>
+
+
+<div id="entry-template" style="display: none">
+	{#surahnames}
+	    <div class="tblrow">
+	    	<div class="left"><a href="1.html">{.surano}</a></div>
+	    	<div class="right"><a href="1.html">{.Name}</a></div>
+	    </div>
+	{/surahnames}
+</div>
+
+<div id="tblcontainer">
+		<div class="tblhead">
+	    	<div class="left">Number</div>
+	    	<div class="right">Surah Name</div>
+	    </div>
+	
+</div>
+
+<table width="49%" cellspacing="0" cellpadding="0" bordercolor="#00FFCC" border="1" align="center" bordercolordark="#009900" bordercolorlight="#66FFCC">
+	<thead>
+		<tr><th bgcolor="#009999">No</th><th bgcolor="#009999" align="center">Surah Name</th></tr>
+	</thead>
+	<tbody>
+		
+	</tbody>
+</table>
+</div>
+
+
+<script src="{{ site.baseurl }}/js/dust-full.min.js"></script>
+<script src="{{ site.baseurl }}/js/dust-helpers.min.js"></script>
+<script src="{{ site.baseurl }}/js/main.js"></script>
+<script type="text/javascript">
+	
+	var langCode="5";
+	fetch('lang.json')
+	.then(response => {
+		 return response.json();
+	})
+	.then(function(result) {
+		console.log(result)
+		var langDet = result.languages[langCode - 1]
+		document.getElementById('name').innerHTML = langDet.Name
+		document.getElementById('translator').innerHTML =langDet.Translator
+	})
+
+var jsonFile = langCode + "/surahnames.json";
+var source   = document.getElementById('entry-template').innerHTML
+var compiledVar = "surahnames";
+compileAndRender(source, compiledVar, jsonFile, '#tblcontainer')
+
+</script>
+

@@ -1,0 +1,52 @@
+{
+    "languages": [
+        {
+            "ID": "1",
+            "DatabaseID": "1",
+            "Language": "Arabic",
+            "Orientation": "RTL",
+            "Name": "King Fahad Quran Complex",
+            "Translator": ""
+        },
+        {
+            "ID": "2",
+            "DatabaseID": "2",
+            "Language": "English-Transliteration",
+            "Orientation": "LTR",
+            "Name": "",
+            "Translator": ""
+        },
+        {
+            "ID": "3",
+            "DatabaseID": "3",
+            "Language": "English",
+            "Orientation": "LTR",
+            "Name": "Hilali & Khan",
+            "Translator": "\tMuhammad Taqi-ud-Din al-Hilali and Muhammad Muhsin Khan"
+        },
+        {
+            "ID": "4",
+            "DatabaseID": "4",
+            "Language": "English",
+            "Orientation": "LTR",
+            "Name": "Saheeh International",
+            "Translator": ""
+        },
+        {
+            "ID": "5",
+            "DatabaseID": "5",
+            "Language": "Tamil",
+            "Orientation": "LTR",
+            "Name": "தாருல் ஹுதா",
+            "Translator": "ஆ.கா.அப்துல் ஹமீது பாகவி"
+        },
+        {
+            "ID": "6",
+            "DatabaseID": "6",
+            "Language": "Tamil",
+            "Orientation": "LTR",
+            "Name": "ஜான் டிரஸ்ட் நிறுவனம்",
+            "Translator": "டாக்டர். முஹம்மது ஜான்"
+        }
+    ]
+}
