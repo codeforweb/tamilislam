@@ -1,38 +1,41 @@
 ---
-title: Surah Names
+title: 
 layout: default
 ---
+
+	<select id="langCode" onchange="options[selectedIndex].value&&self.location.reload(true)">
+		<option value="1">Arabic</option>
+		<option value="2">English-Transliteration</option>
+		<option value="3">Muhammad Taqi-ud-Din al-Hilali and Muhammad Muhsin Khan</option>
+		<option value="4">Saheeh International</option>
+		<option value="5">ஆ.கா.அப்துல் ஹமீது பாகவி</option>
+		<option value="6">டாக்டர். முஹம்மது ஜான்</option>
+		<option value="11">Muhammad Junagarhi</option>
+	</select>
 
 <div id='container'>
 	<h2 id="name"></h2>
 	<h3 id="translator"></h3>
 
 
-<div id="entry-template" style="display: none">
-	{#surahnames}
-	    <div class="tblrow">
-	    	<div class="left"><a href="1.html">{.surano}</a></div>
-	    	<div class="right"><a href="1.html">{.Name}</a></div>
-	    </div>
-	{/surahnames}
-</div>
+	<div id="index-template" style="display: none">
+		{#surahnames}
+		    <div class="tblrow">
+		    	<div class="left"><a href="quran.html?langCode={langCode}&surahno={.surano}">{.surano}</a></div>
+		    	<div class="right"><a href="quran.html?langCode={langCode}&surahno={.surano}">{.Name}</a></div>
+		    </div>
+		{/surahnames}
+	</div>
 
-<div id="tblcontainer">
-		<div class="tblhead">
-	    	<div class="left">Number</div>
-	    	<div class="right">Surah Name</div>
-	    </div>
-	
-</div>
 
-<table width="49%" cellspacing="0" cellpadding="0" bordercolor="#00FFCC" border="1" align="center" bordercolordark="#009900" bordercolorlight="#66FFCC">
-	<thead>
-		<tr><th bgcolor="#009999">No</th><th bgcolor="#009999" align="center">Surah Name</th></tr>
-	</thead>
-	<tbody>
+
+	<div id="tblcontainer">
+			<div class="tblhead">
+		    	<div class="left">Number</div>
+		    	<div class="right">Surah Name</div>
+		    </div>
 		
-	</tbody>
-</table>
+	</div>
 </div>
 
 
@@ -41,22 +44,54 @@ layout: default
 <script src="{{ site.baseurl }}/js/main.js"></script>
 <script type="text/javascript">
 	
-	var langCode="5";
-	fetch('lang.json')
-	.then(response => {
-		 return response.json();
-	})
-	.then(function(result) {
-		console.log(result)
-		var langDet = result.languages[langCode - 1]
-		document.getElementById('name').innerHTML = langDet.Name
-		document.getElementById('translator').innerHTML =langDet.Translator
-	})
+	// var params = (new URL(document.location)).searchParams;
+	// langCode = params.get("langCode");
 
-var jsonFile = langCode + "/surahnames.json";
-var source   = document.getElementById('entry-template').innerHTML
-var compiledVar = "surahnames";
-compileAndRender(source, compiledVar, jsonFile, '#tblcontainer')
+	var langCode='5';
+	var langDet='';
+	var langDir = '';
+
+	async function getLanObj(langCode){
+		var result = await fetchAsync ('lang.json');
+		var langObj= result.languages;
+		langObj.forEach(function(item, index, array) {
+			if(item.ID === langCode){
+				langDet = item
+		  		// console.log(item.ID, index , langDet);
+				document.getElementById('name').innerHTML = langDet.Name
+				document.getElementById('translator').innerHTML =langDet.Translator
+				langDir = langDet.Orientation;		  		
+		  	}
+		})
+	}
+
+	onunload = function()
+	{
+		var foo = document.getElementById('langCode');
+		self.name = 'fooidx' + foo.selectedIndex;
+	}
+
+	onload = function()
+	{
+		var idx, foo = document.getElementById('langCode');
+		foo.selectedIndex = (idx = self.name.split('fooidx')) ?	idx[1] : 0;
+		// console.log(foo.options[foo.selectedIndex].value)
+		langCode = foo.options[foo.selectedIndex].value;
+		console.log(langCode)
+		getLanObj(langCode);
+		var jsonFile = langCode + "/surahnames.json";
+		var source   = document.getElementById('index-template').innerHTML
+		var compiledVar = "surahnames";
+		compileAndRender(source, compiledVar, jsonFile, '#tblcontainer',langCode)			
+	}	
+
+
+
+
+
+
+
+
 
 </script>
 

@@ -13,7 +13,7 @@
             "DatabaseID": "2",
             "Language": "English-Transliteration",
             "Orientation": "LTR",
-            "Name": "",
+            "Name": "Urdhu",
             "Translator": ""
         },
         {
@@ -47,6 +47,14 @@
             "Orientation": "LTR",
             "Name": "ஜான் டிரஸ்ட் நிறுவனம்",
             "Translator": "டாக்டர். முஹம்மது ஜான்"
+        },
+        {
+            "ID": "11",
+            "DatabaseID": "11",
+            "Language": "Urdhu",
+            "Orientation": "RTL",
+            "Name": "Urdhu",
+            "Translator": "Muhammad Junagarhi"
         }
     ]
 }

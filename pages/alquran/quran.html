@@ -1,0 +1,51 @@
+---
+title: Surah Names
+layout: default
+---
+
+<div id='container'>
+	<h2 id="name"></h2>
+	<h3 id="translator"></h3>
+
+	<div id="entry-template" style="display: none">
+		{#quran}			
+			    <div class="tblrow">
+
+					{@select}
+     					{@eq key="{.SuraID}" value="{surahno}"}{/eq}
+     					{@pte key="{.AyahText}" value="{ayath}"}{/pte}
+			    		{@any}
+			    			<span id="{.VerseID}">{.SuraID}:{.VerseID}</span><br/>
+			    			<div class="ayath">{.AyahText} </div>
+			    		{/any}
+					  {/select}
+			    </div>	    
+		{/quran}
+	</div>
+
+	<div id="tblcontainer">
+			<div class="tblhead">
+		    	<div class="ayath">Ayaths</div>
+		    </div>
+		
+	</div>
+</div>
+
+
+<script src="{{ site.baseurl }}/js/dust-full.min.js"></script>
+<script src="{{ site.baseurl }}/js/dust-helpers.js"></script>
+<script src="{{ site.baseurl }}/js/main.js"></script>
+<script type="text/javascript">
+
+var params = (new URL(document.location)).searchParams;
+var langCode = params.get("langCode");
+var surahno = params.get("surahno");
+var ayath = ""
+var jsonFile = langCode + "/"+ langCode + "_" + "quran.json";
+// console.log(jsonFile)
+var source   = document.getElementById('entry-template').innerHTML
+var compiledVar = "quranverses";
+compileAndRender(source, compiledVar, jsonFile, '#tblcontainer', langCode, surahno, ayath)
+
+</script>
+

@@ -164,6 +164,13 @@ table th,td {border:solid 1px #fab;}
       display: table-header-group 
     }
 
+  .ayath {
+      display: table-cell;
+      padding: 20px;
+      border-bottom: #000000 dotted 1px;
+      font-size: 20px   
+    }
+
   .left, .right, .middle {
       display: table-cell;
       padding: 5px;

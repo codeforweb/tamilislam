@@ -1,0 +1,688 @@
+{
+    "surahnames": [
+        {
+            "ID": "231",
+            "surano": "1",
+            "Name": "al-Fatihah (The Opening) ",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "232",
+            "surano": "2",
+            "Name": "al-Baqarah (The Cow)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "233",
+            "surano": "3",
+            "Name": "Ale-'Imran (Family of Imran)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "234",
+            "surano": "4",
+            "Name": "an-Nisa' (The Women)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "235",
+            "surano": "5",
+            "Name": "al-Ma'idah (The Table)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "236",
+            "surano": "6",
+            "Name": "al-An'am (The Grazing Live stock)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "237",
+            "surano": "7",
+            "Name": "al-A'raf (The Elevations)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "238",
+            "surano": "8",
+            "Name": "al-Anfal (The Spoils of War)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "239",
+            "surano": "9",
+            "Name": "at-Tawbah (Repentance)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "240",
+            "surano": "10",
+            "Name": "Yunus (Jonah)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "241",
+            "surano": "11",
+            "Name": "Hud (Hud) .",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "242",
+            "surano": "12",
+            "Name": "Yusuf (Joseph)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "243",
+            "surano": "13",
+            "Name": "ar-Ra'd (Thunder) .",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "244",
+            "surano": "14",
+            "Name": "Ibraheem (Abraham)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "245",
+            "surano": "15",
+            "Name": "al-Hijr (The Valley of Stone)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "246",
+            "surano": "16",
+            "Name": "an-Nahl (The Bee) .",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "247",
+            "surano": "17",
+            "Name": "al-Isra' (The Night Journey)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "248",
+            "surano": "18",
+            "Name": "al-Kahf (The Cave) .",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "249",
+            "surano": "19",
+            "Name": "Maryam (Mary)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "250",
+            "surano": "20",
+            "Name": "Ta Ha (Ta Ha)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "251",
+            "surano": "21",
+            "Name": "al-Anbiya' (The Prophets) .",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "252",
+            "surano": "22",
+            "Name": "al-Hajj (The Pilgrimage)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "253",
+            "surano": "23",
+            "Name": "al-Mu'miniin (The Believers)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "254",
+            "surano": "24",
+            "Name": "an-Nur (Light)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "255",
+            "surano": "25",
+            "Name": "al-Furqan (The Criterion) .",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "256",
+            "surano": "26",
+            "Name": "ash-Shu'ara' (The Poets)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "257",
+            "surano": "27",
+            "Name": "an-Naml (The Ants)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "258",
+            "surano": "28",
+            "Name": "al-Qasas (The Story)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "259",
+            "surano": "29",
+            "Name": "al-Ankabut (The Spider) .",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "260",
+            "surano": "30",
+            "Name": "ar-Riim (The Romans)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "261",
+            "surano": "31",
+            "Name": "Luqman (Luqman) .",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "262",
+            "surano": "32",
+            "Name": "as-Sajdah (Prostration)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "263",
+            "surano": "33",
+            "Name": "al-Ahzab (The Confederates)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "264",
+            "surano": "34",
+            "Name": "Saba' (The People of) Saba)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "265",
+            "surano": "35",
+            "Name": "Fatir (The Creator) .",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "266",
+            "surano": "36",
+            "Name": "Ya Seen (Ya Seen) .",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "267",
+            "surano": "37",
+            "Name": "as-Saffat (Those Lined Up).",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "268",
+            "surano": "38",
+            "Name": "Sad (Sad) ......",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "269",
+            "surano": "39",
+            "Name": "az-Zumar (The Groups) ....",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "270",
+            "surano": "40",
+            "Name": "Ghafir (The Forgiver) ....",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "271",
+            "surano": "41",
+            "Name": "Fussilat (Presented In Detail)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "272",
+            "surano": "42",
+            "Name": "ash-Shura (Consultation) ....",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "273",
+            "surano": "43",
+            "Name": "az-Zukhruf (Ornaments) ....",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "274",
+            "surano": "44",
+            "Name": "ad-Dukhan (Smoke). ....",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "275",
+            "surano": "45",
+            "Name": "al-Jathiyah (Kneeling) ....",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "276",
+            "surano": "46",
+            "Name": "al-Ahqaf (The Sand Dunes)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "277",
+            "surano": "47",
+            "Name": "Muhammad (Muhammad).",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "278",
+            "surano": "48",
+            "Name": "al-Fath (The Conquest) ....",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "279",
+            "surano": "49",
+            "Name": "al-Hujurat (The Chambers)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "280",
+            "surano": "50",
+            "Name": "Qaf (Qaf)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "281",
+            "surano": "51",
+            "Name": "adh-Dhariyat (The Scattering Winds)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "282",
+            "surano": "52",
+            "Name": "at-Tur (The Mount). ....",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "283",
+            "surano": "53",
+            "Name": "an-Najm (The Star) .....",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "284",
+            "surano": "54",
+            "Name": "al-Qamar (The Moon) ....",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "285",
+            "surano": "55",
+            "Name": "ar-Rahman (The Most Merciful) .",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "286",
+            "surano": "56",
+            "Name": "al-Waqi'ah (The Occurrence)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "287",
+            "surano": "57",
+            "Name": "al-Hadeed (Iron) .....",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "288",
+            "surano": "58",
+            "Name": "al-Mujadilah (The Contention)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "289",
+            "surano": "59",
+            "Name": "al-Hashr (The Gathering) ....",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "290",
+            "surano": "60",
+            "Name": "al-Mumtahinah (The Woman Examined)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "291",
+            "surano": "61",
+            "Name": "as-Saff (Batde Formation) .",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "292",
+            "surano": "62",
+            "Name": "al-Jumu'ah (Friday) .....",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "293",
+            "surano": "63",
+            "Name": "al-Munafiqiin (The Hypocrites) .",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "294",
+            "surano": "64",
+            "Name": "at-Taghabun (Deprivation)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "295",
+            "surano": "65",
+            "Name": "at-Talaq (Divorce) .....",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "296",
+            "surano": "66",
+            "Name": "at-Tahreem (Prohibition) ....",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "297",
+            "surano": "67",
+            "Name": "al-Mulk (Dominion). ....",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "298",
+            "surano": "68",
+            "Name": "al-Qalam (The Pen). ....",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "299",
+            "surano": "69",
+            "Name": "al-Haqqah (The Manifest Reality).",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "300",
+            "surano": "70",
+            "Name": "al-Ma'arij (The Ways of Ascent) .",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "301",
+            "surano": "71",
+            "Name": "Nuh (Noah)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "302",
+            "surano": "72",
+            "Name": "al-Jinn (The Jinn) .....",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "303",
+            "surano": "73",
+            "Name": "al-Muzzammil (The Enwrapped One) .",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "304",
+            "surano": "74",
+            "Name": "al-Muddathir (The Cloaked One) .",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "305",
+            "surano": "75",
+            "Name": "al-Qiyamah (The Resurrection) .",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "306",
+            "surano": "76",
+            "Name": "al-Insan (Man) .....",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "307",
+            "surano": "77",
+            "Name": "al-Mursalat (Those Sent Forth) .",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "308",
+            "surano": "78",
+            "Name": "an-Naba' (The News) ....",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "309",
+            "surano": "79",
+            "Name": "an-Nazi'at (The Extractors)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "310",
+            "surano": "80",
+            "Name": "'Abasa (He Frowned) ....",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "311",
+            "surano": "81",
+            "Name": "at-Takweer (The Wrapping)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "312",
+            "surano": "82",
+            "Name": "al-Infitar (The Breaking Apart)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "313",
+            "surano": "83",
+            "Name": "al-Mutaffifeen (Those Who Give Less)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "314",
+            "surano": "84",
+            "Name": "al-Inshiqaq (The Splitting) .",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "315",
+            "surano": "85",
+            "Name": "al-Buruj (The Great Stars) .",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "316",
+            "surano": "86",
+            "Name": "at-Tariq (That Which Comes At Night)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "317",
+            "surano": "87",
+            "Name": "al-A'la (The Most High) .",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "318",
+            "surano": "88",
+            "Name": "al-Ghashiyah (The Overwhelming)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "319",
+            "surano": "89",
+            "Name": "al-Fajr (The Dawn) .",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "320",
+            "surano": "90",
+            "Name": "al-Balad (The City) .",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "321",
+            "surano": "91",
+            "Name": "ash-Shams (The Sun)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "322",
+            "surano": "92",
+            "Name": "al-Layl (The Night) .",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "323",
+            "surano": "93",
+            "Name": "adh-Dhuha (The Morning Brightness)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "324",
+            "surano": "94",
+            "Name": "ash-Sharh (Expansion)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "325",
+            "surano": "95",
+            "Name": "at-Teen (The Fig) .",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "326",
+            "surano": "96",
+            "Name": "al-Alaq (The Clinging Substance)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "327",
+            "surano": "97",
+            "Name": "al-Qadr (The Decree)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "328",
+            "surano": "98",
+            "Name": "al-Bayyinah (Clear Evidence)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "329",
+            "surano": "99",
+            "Name": "az-Zalzalah (The Earthquake)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "330",
+            "surano": "100",
+            "Name": "al-Aadiyat (The Racers) .",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "331",
+            "surano": "101",
+            "Name": "al-Qari'ah (The Calamity)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "332",
+            "surano": "102",
+            "Name": "at-Takathur (Competition in Increase)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "333",
+            "surano": "103",
+            "Name": "al-Asr (Time)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "334",
+            "surano": "104",
+            "Name": "al-Humazah (The Scorner)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "335",
+            "surano": "105",
+            "Name": "al-FIl (The Elephant)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "336",
+            "surano": "106",
+            "Name": "al-Quraysh ((the tribe of) Quraysh)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "337",
+            "surano": "107",
+            "Name": "al-Ma'un (Assistance)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "338",
+            "surano": "108",
+            "Name": "al-Kawthar (Abundance) .",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "339",
+            "surano": "109",
+            "Name": "al-Kafirun (The Disbelievers)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "340",
+            "surano": "110",
+            "Name": "an-Nasr (Victory) .",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "341",
+            "surano": "111",
+            "Name": "al-Masad (Fiber) .",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "342",
+            "surano": "112",
+            "Name": "al-Ikhlas (Purification)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "343",
+            "surano": "113",
+            "Name": "al-Falaq (Daybreak)",
+            "DatabaseID": "4"
+        },
+        {
+            "ID": "344",
+            "surano": "114",
+            "Name": "an-Nas (Mankind) .",
+            "DatabaseID": "4"
+        }
+    ]
+}

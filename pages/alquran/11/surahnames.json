@@ -1,0 +1,688 @@
+{
+    "surahnames": [
+        {
+            "ID": "115",
+            "surano": "1",
+            "Name": "al-Fātihah ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "116",
+            "surano": "2",
+            "Name": "al-Baqarah ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "117",
+            "surano": "3",
+            "Name": "Āl ‘Imrān ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "118",
+            "surano": "4",
+            "Name": "an-Nisā’ ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "119",
+            "surano": "5",
+            "Name": "al-Mā’idah ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "120",
+            "surano": "6",
+            "Name": "al-An‘ām ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "121",
+            "surano": "7",
+            "Name": "al-A‘rāf ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "122",
+            "surano": "8",
+            "Name": "al-Anfāl ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "123",
+            "surano": "9",
+            "Name": "at-Tawbah ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "124",
+            "surano": "10",
+            "Name": "Yūnus ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "125",
+            "surano": "11",
+            "Name": "Hūd ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "126",
+            "surano": "12",
+            "Name": "Yūsuf ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "127",
+            "surano": "13",
+            "Name": "ar-Ra‘d ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "128",
+            "surano": "14",
+            "Name": "Ibrāhīm ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "129",
+            "surano": "15",
+            "Name": "al-Hijr ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "130",
+            "surano": "16",
+            "Name": "an-Nahl ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "131",
+            "surano": "17",
+            "Name": "al-Isrā’ ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "132",
+            "surano": "18",
+            "Name": "al-Kahf ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "133",
+            "surano": "19",
+            "Name": "Maryam ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "134",
+            "surano": "20",
+            "Name": "Tāhā",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "135",
+            "surano": "21",
+            "Name": "al-Ambiyā’ ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "136",
+            "surano": "22",
+            "Name": "al-Hajj ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "137",
+            "surano": "23",
+            "Name": "al-Mu’minūn ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "138",
+            "surano": "24",
+            "Name": "an-Nūr ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "139",
+            "surano": "25",
+            "Name": "al-Furqān ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "140",
+            "surano": "26",
+            "Name": "ash-Shu‘arā’ ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "141",
+            "surano": "27",
+            "Name": "an-Naml ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "142",
+            "surano": "28",
+            "Name": "al-Qasas ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "143",
+            "surano": "29",
+            "Name": "al-‘Ankabūt ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "144",
+            "surano": "30",
+            "Name": "ar-Rūm ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "145",
+            "surano": "31",
+            "Name": "Luqmān",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "146",
+            "surano": "32",
+            "Name": "as-Sajdah ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "147",
+            "surano": "33",
+            "Name": "al-Ahzāb ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "148",
+            "surano": "34",
+            "Name": "Saba’ ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "149",
+            "surano": "35",
+            "Name": "Fātir ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "150",
+            "surano": "36",
+            "Name": "Yāsīn ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "151",
+            "surano": "37",
+            "Name": "as-Sāffāt ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "152",
+            "surano": "38",
+            "Name": "Sād",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "153",
+            "surano": "39",
+            "Name": "az-Zumar ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "154",
+            "surano": "40",
+            "Name": "Ghāfir ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "155",
+            "surano": "41",
+            "Name": "Fussilat ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "156",
+            "surano": "42",
+            "Name": "ash-Shūrā ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "157",
+            "surano": "43",
+            "Name": "az-Zukhruf ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "158",
+            "surano": "44",
+            "Name": "ad-Dukhān ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "159",
+            "surano": "45",
+            "Name": "al-Jāthiyah ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "160",
+            "surano": "46",
+            "Name": "al-Ahqāf ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "161",
+            "surano": "47",
+            "Name": "Muhammad",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "162",
+            "surano": "48",
+            "Name": "al-Fath ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "163",
+            "surano": "49",
+            "Name": "al-Hujurāt ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "164",
+            "surano": "50",
+            "Name": "Qāf",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "165",
+            "surano": "51",
+            "Name": "adh-Dhāriyāt ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "166",
+            "surano": "52",
+            "Name": "at-Tūr ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "167",
+            "surano": "53",
+            "Name": "an-Najm ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "168",
+            "surano": "54",
+            "Name": "al-Qamar ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "169",
+            "surano": "55",
+            "Name": "ar-Rahmān ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "170",
+            "surano": "56",
+            "Name": "al-Wāqi‘ah ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "171",
+            "surano": "57",
+            "Name": "al-Hadīd ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "172",
+            "surano": "58",
+            "Name": "al-Mujādalah ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "173",
+            "surano": "59",
+            "Name": "al-Hashr ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "174",
+            "surano": "60",
+            "Name": "al-Mumtahinah ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "175",
+            "surano": "61",
+            "Name": "as-Saff ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "176",
+            "surano": "62",
+            "Name": "al-Jumu‘ah ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "177",
+            "surano": "63",
+            "Name": "al-Munāfiqūn ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "178",
+            "surano": "64",
+            "Name": "at-Taghābun ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "179",
+            "surano": "65",
+            "Name": "at-Talāq ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "180",
+            "surano": "66",
+            "Name": "at-Tahrīm ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "181",
+            "surano": "67",
+            "Name": "al-Mulk ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "182",
+            "surano": "68",
+            "Name": "al-Qalam ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "183",
+            "surano": "69",
+            "Name": "al-Hāqqah ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "184",
+            "surano": "70",
+            "Name": "al-Ma‘ārij ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "185",
+            "surano": "71",
+            "Name": "Nūh ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "186",
+            "surano": "72",
+            "Name": "al-Jinn ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "187",
+            "surano": "73",
+            "Name": "al-Muzzammil ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "188",
+            "surano": "74",
+            "Name": "al-Muddaththir ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "189",
+            "surano": "75",
+            "Name": "al-Qiyāmah ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "190",
+            "surano": "76",
+            "Name": "al-Insān ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "191",
+            "surano": "77",
+            "Name": "al-Mursalāt ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "192",
+            "surano": "78",
+            "Name": "an-Naba’ ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "193",
+            "surano": "79",
+            "Name": "an-Nāzi‘āt ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "194",
+            "surano": "80",
+            "Name": "‘Abasa ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "195",
+            "surano": "81",
+            "Name": "at-Takwīr ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "196",
+            "surano": "82",
+            "Name": "al-Infitār ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "197",
+            "surano": "83",
+            "Name": "al-Mutaffifīn ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "198",
+            "surano": "84",
+            "Name": "al-Inshiqāq ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "199",
+            "surano": "85",
+            "Name": "al-Burūj ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "200",
+            "surano": "86",
+            "Name": "at-Tāriq ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "201",
+            "surano": "87",
+            "Name": "al-A‘lā ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "202",
+            "surano": "88",
+            "Name": "al-Ghāshiyah ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "203",
+            "surano": "89",
+            "Name": "al-Fajr ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "204",
+            "surano": "90",
+            "Name": "al-Balad ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "205",
+            "surano": "91",
+            "Name": "ash-Shams ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "206",
+            "surano": "92",
+            "Name": "al-Layl ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "207",
+            "surano": "93",
+            "Name": "ad-Duhā ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "208",
+            "surano": "94",
+            "Name": "ash-Sharh ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "209",
+            "surano": "95",
+            "Name": "at-Tīn ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "210",
+            "surano": "96",
+            "Name": "al-‘Alaq ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "211",
+            "surano": "97",
+            "Name": "al-Qadr ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "212",
+            "surano": "98",
+            "Name": "al-Bayyinah ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "213",
+            "surano": "99",
+            "Name": "az-Zalzalah ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "214",
+            "surano": "100",
+            "Name": "al-‘Ādiyāt ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "215",
+            "surano": "101",
+            "Name": "al-Qāri‘ah ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "216",
+            "surano": "102",
+            "Name": "at-Takāthur ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "217",
+            "surano": "103",
+            "Name": "al-‘Asr ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "218",
+            "surano": "104",
+            "Name": "al-Humazah ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "219",
+            "surano": "105",
+            "Name": "al-Fīl ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "220",
+            "surano": "106",
+            "Name": "al-Quraysh",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "221",
+            "surano": "107",
+            "Name": "al-Mā‘ūn ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "222",
+            "surano": "108",
+            "Name": "al-Kawthar ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "223",
+            "surano": "109",
+            "Name": "al-Kāfirūn ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "224",
+            "surano": "110",
+            "Name": "an-Nasr ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "225",
+            "surano": "111",
+            "Name": "al-masad ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "226",
+            "surano": "112",
+            "Name": "al-Ikhlās ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "227",
+            "surano": "113",
+            "Name": "al-Falaq ",
+            "DatabaseID": "2"
+        },
+        {
+            "ID": "228",
+            "surano": "114",
+            "Name": "al-Nās ",
+            "DatabaseID": "2"
+        }
+    ]
+}
