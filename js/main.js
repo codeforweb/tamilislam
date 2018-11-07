@@ -30,10 +30,23 @@ function changeLang(e){
 }
 
 function searchQuran(){
-
 	var params = (new URL(document.location)).searchParams;
 	var langCode = params.get("langCode");
 	var ayath= document.querySelector('#ayath').value;
-	var url = document.location.origin + document.location.pathname + '?langCode='+ langCode + '&ayath='+ ayath;
-	document.location.replace(url);
+	if(ayath.length != 0){
+		var url = document.location.origin + document.location.pathname + '?langCode='+ langCode + '&ayath='+ ayath;
+		document.location.replace(url);
+	}
+}
+
+function searchQuranIndex() {
+	var langCode = document.querySelector('#txtLang').value;
+	var ayath = document.querySelector('#ayath').value;
+	if(ayath.length != 0){
+		var indexurl = document.location.href;
+		var quranURL=  indexurl.replace("index.html", "quran.html") 
+		var url = quranURL + '&ayath='+ ayath;
+		// console.log(url)
+		document.location.replace(url);
+	}
 }

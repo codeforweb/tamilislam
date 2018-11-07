@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+/*https://fontawesome.com/v4.7.0/icon/leanpub*/
 *, *:before, *:after {
   margin: 0;
   padding: 0;
@@ -78,15 +79,15 @@ body {
 }
 
 .nav li:nth-child(1) a:before {
-  content: '\f00a';
+  content: "\f02d";
 }
 
 .nav li:nth-child(2) a:before {
-  content: '\f012';
+  content: "\f21e";
 }
 
 .nav li:nth-child(3) a:before {
-  content: '\f0e8';
+  content: "\f212";
 }
 
 .nav li:nth-child(4) a:before {
@@ -148,7 +149,7 @@ table th,td {border:solid 1px #fab;}
 	table td {border:solid 1px #fab; width:100px; word-wrap:break-word;}
 */	
 }
-#container{width: 90%;}
+#container{width: 80%;}
 
 #tblcontainer {
     display: table;

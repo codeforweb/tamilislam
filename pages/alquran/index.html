@@ -3,6 +3,10 @@ title:
 layout: default
 ---
 
+				<input type="text" id="ayath" placeholder="Search in this Quran">
+				<button class="searchBtn" onClick="searchQuranIndex()">Search Quran</button>
+				<br><br>
+
 	<select id="langCode">
 		<option value="1">Arabic</option>
 		<!-- <option value="2">English-Transliteration</option> -->
@@ -11,7 +15,9 @@ layout: default
 		<option value="5">ஆ.கா.அப்துல் ஹமீது பாகவி</option>
 		<option value="6">டாக்டர். முஹம்மது ஜான்</option>
 		<option value="11">Urdhu - Muhammad Junagarhi</option>
-	</select> <br><br>
+	</select> 
+		<br><br>
+
 
 <div id='container'>
 	<h2 id="name"></h2>
@@ -25,6 +31,8 @@ layout: default
 		    	<div class="right"><a href="quran.html?langCode={langCode}&surahno={.surano}">{.Name}</a></div>
 		    </div>
 		{/surahnames}
+		<input type="hidden" id="txtLang" value="{langCode}">
+
 	</div>
 
 
