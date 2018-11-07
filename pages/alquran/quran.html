@@ -1,13 +1,17 @@
 ---
-title: Surah Names
+title:
 layout: default
 ---
+
+	<input type="text" id="ayath" placeholder="Search in this Quran">
+	<button class="searchBtn" onClick="searchQuran()">Search Quran</button>
 
 <div id='container'>
 	<h2 id="name"></h2>
 	<h3 id="translator"></h3>
 
 	<div id="entry-template" style="display: none">
+		<h2> <a href="index.html?langCode={langCode}">Surah List</a></h2>
 		{#quran}			
 			    <div class="tblrow">
 
@@ -25,7 +29,7 @@ layout: default
 
 	<div id="tblcontainer">
 			<div class="tblhead">
-		    	<div class="ayath">Ayaths</div>
+		    	<div class="ayath">&nbsp;</div>
 		    </div>
 		
 	</div>
@@ -37,15 +41,22 @@ layout: default
 <script src="{{ site.baseurl }}/js/main.js"></script>
 <script type="text/javascript">
 
-var params = (new URL(document.location)).searchParams;
-var langCode = params.get("langCode");
-var surahno = params.get("surahno");
-var ayath = ""
-var jsonFile = langCode + "/"+ langCode + "_" + "quran.json";
-// console.log(jsonFile)
-var source   = document.getElementById('entry-template').innerHTML
-var compiledVar = "quranverses";
-compileAndRender(source, compiledVar, jsonFile, '#tblcontainer', langCode, surahno, ayath)
+	onload = function() {
+		var params = (new URL(document.location)).searchParams;
+		var langCode = params.get("langCode");
+		var surahno = params.get("surahno");
+		var ayath = params.get("ayath");
+		loadQuranVerses(langCode, surahno, ayath);
+	}
+
+	function loadQuranVerses(langCode, surahno, ayath){
+		var jsonFile = langCode + "/"+ langCode + "_" + "quran.json";
+		console.log(jsonFile)
+		var source   = document.getElementById('entry-template').innerHTML
+		var compiledVar = "quranverses";
+		compileAndRender(source, compiledVar, jsonFile, '#tblcontainer', langCode, surahno, ayath)
+
+	}	
 
 </script>
 

@@ -3,15 +3,15 @@ title:
 layout: default
 ---
 
-	<select id="langCode" onchange="options[selectedIndex].value&&self.location.reload(true)">
+	<select id="langCode" onchange="changeLang()">
 		<option value="1">Arabic</option>
 		<option value="2">English-Transliteration</option>
 		<option value="3">Muhammad Taqi-ud-Din al-Hilali and Muhammad Muhsin Khan</option>
 		<option value="4">Saheeh International</option>
 		<option value="5">ஆ.கா.அப்துல் ஹமீது பாகவி</option>
 		<option value="6">டாக்டர். முஹம்மது ஜான்</option>
-		<option value="11">Muhammad Junagarhi</option>
-	</select>
+		<option value="11">Urdhu - Muhammad Junagarhi</option>
+	</select> <br><br>
 
 <div id='container'>
 	<h2 id="name"></h2>
@@ -43,13 +43,11 @@ layout: default
 <script src="{{ site.baseurl }}/js/dust-helpers.min.js"></script>
 <script src="{{ site.baseurl }}/js/main.js"></script>
 <script type="text/javascript">
-	
-	// var params = (new URL(document.location)).searchParams;
-	// langCode = params.get("langCode");
 
 	var langCode='5';
 	var langDet='';
 	var langDir = '';
+
 
 	async function getLanObj(langCode){
 		var result = await fetchAsync ('lang.json');
@@ -64,20 +62,22 @@ layout: default
 		  	}
 		})
 	}
-
+/*
 	onunload = function()
 	{
 		var foo = document.getElementById('langCode');
 		self.name = 'fooidx' + foo.selectedIndex;
 	}
-
+*/
 	onload = function()
 	{
-		var idx, foo = document.getElementById('langCode');
-		foo.selectedIndex = (idx = self.name.split('fooidx')) ?	idx[1] : 0;
-		// console.log(foo.options[foo.selectedIndex].value)
-		langCode = foo.options[foo.selectedIndex].value;
-		console.log(langCode)
+		//var idx, foo = document.getElementById('langCode');
+		// foo.selectedIndex = (idx = self.name.split('fooidx')) ?	idx[1] : 0;
+		var params = (new URL(document.location)).searchParams;
+		langCode = params.get("langCode");
+		if(langCode==null)	langCode='5'
+		document.getElementById('langCode').value = langCode;
+		// console.log(langCode)
 		getLanObj(langCode);
 		var jsonFile = langCode + "/surahnames.json";
 		var source   = document.getElementById('index-template').innerHTML
