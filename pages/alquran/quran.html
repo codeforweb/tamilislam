@@ -51,7 +51,7 @@ layout: default
 
 	function loadQuranVerses(langCode, surahno, ayath){
 		var jsonFile = langCode + "/"+ langCode + "_" + "quran.json";
-		console.log(jsonFile)
+		// console.log(jsonFile)
 		var source   = document.getElementById('entry-template').innerHTML
 		var compiledVar = "quranverses";
 		compileAndRender(source, compiledVar, jsonFile, '#tblcontainer', langCode, surahno, ayath)

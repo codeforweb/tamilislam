@@ -21,9 +21,9 @@ function renderTemplate(result, compiledVar, outputEl,langCode, surahno, ayath) 
 		});
 
 }
-function changeLang(){
-	var elem = (typeof this.selectedIndex === "undefined" ? window.event.srcElement : this);
-	// options[selectedIndex].value && self.location
+function changeLang(e){
+    // console.log(e.target, e.srcElement);
+	var elem = e.target;
     var value = elem.value || elem.options[elem.selectedIndex].value;
     var url = document.location.origin + document.location.pathname + '?langCode='+ value;
     document.location.replace(url);
@@ -36,11 +36,4 @@ function searchQuran(){
 	var ayath= document.querySelector('#ayath').value;
 	var url = document.location.origin + document.location.pathname + '?langCode='+ langCode + '&ayath='+ ayath;
 	document.location.replace(url);
-	// console.log(langCode, ayath)
-	// loadQuranVerses(langCode, '', ayath)
-
-	
-	// var url = document.location.origin + document.location.pathname + '?langCode='+ langCode;
-	// document.location.replace(url);
-	// loadQuranVerses(langCode, surahno, ayath)
 }

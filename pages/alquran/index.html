@@ -3,7 +3,7 @@ title:
 layout: default
 ---
 
-	<select id="langCode" onchange="changeLang()">
+	<select id="langCode">
 		<option value="1">Arabic</option>
 		<option value="2">English-Transliteration</option>
 		<option value="3">Muhammad Taqi-ud-Din al-Hilali and Muhammad Muhsin Khan</option>
@@ -82,7 +82,9 @@ layout: default
 		var jsonFile = langCode + "/surahnames.json";
 		var source   = document.getElementById('index-template').innerHTML
 		var compiledVar = "surahnames";
-		compileAndRender(source, compiledVar, jsonFile, '#tblcontainer',langCode)			
+		compileAndRender(source, compiledVar, jsonFile, '#tblcontainer',langCode)
+
+		document.getElementById('langCode').addEventListener('change',changeLang);
 	}	
 
 
