@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
-/*https://fontawesome.com/v4.7.0/icon/leanpub*/
+/*https://fontawesome.com/v4.7.0/icons/*/
 *, *:before, *:after {
   margin: 0;
   padding: 0;
@@ -52,7 +52,7 @@ body {
 
 /* Demo Navigation */
 .title {
-  font-size: 16px;
+  font-size: 21px;
   line-height: 50px;
   text-align: center;
   text-transform: uppercase;
@@ -66,13 +66,13 @@ body {
   position: relative;
   display: block;
   padding: 20px 0 20px 50px;
-  font-size: 12px;
+  font-size: 21px;
   color: #eee;
   border-bottom: 1px solid #222;
 }
 
 .nav li a:before {
-  font: 14px fontawesome;
+  font: 21px fontawesome;
   position: absolute;
   top: 19px;
   left: 20px;
@@ -120,6 +120,14 @@ body {
   background: #444;
 }
 
+.title a:before{
+  font: 21px fontawesome;
+  position: absolute;
+  top: 12px;
+  left: 37px;  
+  content: "\f015";
+}
+
 /* Demo Description */
 h1 {
   margin: 25px 0 15px;
@@ -133,8 +141,8 @@ h2 {
 }
 
 .pagelist li {margin-top: 20px; }
-.tamil {font-size: 10pt;line-height : 1.6em }
-.tamil1 {font-size: 10pt;line-height : 1.6em }
+.tamil {font-size: 12pt;line-height : 1.6em }
+.tamil1 {font-size: 12pt;line-height : 1.6em }
 .arabic {text-align: right; direction: rtl; unicode-bidi: embed;font-size: 25px;}
 .arabic1 {font-size: 18px;}
 .notes li{border:0px;font-size: 8pt;}
