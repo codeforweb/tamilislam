@@ -49,6 +49,14 @@
             "Translator": "டாக்டர். முஹம்மது ஜான்"
         },
         {
+            "ID": "7",
+            "DatabaseID": "7",
+            "Language": "Tamil",
+            "Orientation": "LTR",
+            "Name": "மன்னர் ஃபஹத் வளாகம் (சவூதி)'",
+            "Translator": ""
+        },		
+        {
             "ID": "11",
             "DatabaseID": "11",
             "Language": "Urdhu",
