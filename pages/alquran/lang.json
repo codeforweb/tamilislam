@@ -55,7 +55,15 @@
             "Orientation": "LTR",
             "Name": "மன்னர் ஃபஹத் வளாகம் (சவூதி)'",
             "Translator": ""
-        },		
+        },
+        {
+            "ID": "8",
+            "DatabaseID": "8",
+            "Language": "English",
+            "Orientation": "LTR",
+            "Name":"Rawwad Center"
+            "Translator": ""
+        },			
         {
             "ID": "11",
             "DatabaseID": "11",
