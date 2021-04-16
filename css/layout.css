@@ -91,7 +91,8 @@ body {
 }
 
 .nav li:nth-child(4) a:before {
-  content: '\f0c3';
+  content: '\f073';
+
 }
 
 .nav li:nth-child(5) a:before {
