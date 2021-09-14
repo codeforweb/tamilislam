@@ -14,7 +14,7 @@ html, body {
 }
 
 body {
-  font-family: 'Atkinson+Hyperlegible, sans-serif';
+  font-family: 'Atkinson+Hyperlegible,Latha,Helmet,Freesans,Helvetica,Arial,sans-serif';
   color: #333;
   background: #333;
   overflow-x: hidden;
@@ -147,8 +147,10 @@ h2 {
   }
 
 .pagelist li {margin-top: 20px; }
-.tamil {font-size: 12pt;line-height : 1.6em }
-.tamil1 {font-size: 12pt;line-height : 1.6em }
+.pagelist ul{line-height:180%}
+
+.tamil {font-size: 14pt;line-height : 1.6em }
+.tamil1 {font-size: 14pt;line-height : 1.6em }
 .arabic {text-align: right; direction: rtl; unicode-bidi: embed;font-size: 25px;}
 .arabic1 {font-size: 18px;}
 .notes li{border:0px;font-size: 8pt;}
@@ -264,6 +266,6 @@ input[type=text]:focus {
   padding: 10px;
   }
 .nav ul{line-height:180%}
-
+.pagelist ul{line-height:180%}
 
 }
