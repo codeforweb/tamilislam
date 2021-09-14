@@ -1,4 +1,683 @@
 {
-	"bmnames":[{"booktitle_meezan":",iwr;nra;jpapd; Muk;gk;","sno":1,"volume":1,"book":1,"booktitle":"இறைச்செய்தியின் ஆரம்பம்"},{"booktitle_meezan":"<khd; vDk; ,iwek;gpf;if","sno":8,"volume":1,"book":2,"booktitle":"ஈமான் எனும் இறைநம்பிக்கை"},{"booktitle_meezan":"fy;tpapd; rpwg;G","sno":57,"volume":1,"book":3,"booktitle":"கல்வியின் சிறப்பு"},{"booktitle_meezan":"c@r; nra;tJ","sno":132,"volume":1,"book":4,"booktitle":"உளூச் செய்வது"},{"booktitle_meezan":"Fspj;jy;","sno":248,"volume":1,"book":5,"booktitle":"குளித்தல்"},{"booktitle_meezan":"khjtplha;","sno":294,"volume":1,"book":6,"booktitle":"மாதவிடாய்"},{"booktitle_meezan":"jak;Kk;","sno":334,"volume":1,"book":7,"booktitle":"தயம்மும்"},{"booktitle_meezan":"njhOif","sno":349,"volume":1,"book":8,"booktitle":"தொழுகை"},{"booktitle_meezan":"njhOif Neuq;fs;","sno":521,"volume":1,"book":9,"booktitle":"தொழுகை நேரங்கள்"},{"booktitle_meezan":"ghq;F","sno":603,"volume":1,"book":10,"booktitle":"பாங்கு"},{"booktitle_meezan":"[{k;Mj; njhOif","sno":876,"volume":1,"book":11,"booktitle":"ஜும்ஆத் தொழுகை"},{"booktitle_meezan":"mr;repiyj; njhOif","sno":942,"volume":1,"book":12,"booktitle":"அச்சநிலைத் தொழுகை"},{"booktitle_meezan":",UngUehs;fs;","sno":948,"volume":1,"book":13,"booktitle":"இருபெருநாள்கள்"},{"booktitle_meezan":"tpj;Uj; njhOif","sno":990,"volume":1,"book":14,"booktitle":"வித்ருத் தொழுகை"},{"booktitle_meezan":"kio Ntz;Ljy;","sno":1005,"volume":1,"book":15,"booktitle":"மழை வேண்டுதல்"},{"booktitle_meezan":"fpufzq;fs;","sno":1040,"volume":1,"book":16,"booktitle":"கிரகணங்கள்"},{"booktitle_meezan":"Fu;MdpYs;s ][;jh trdq;fs;","sno":1067,"volume":1,"book":17,"booktitle":"குர்ஆனிலுள்ள ஸஜ்தா வசனங்கள்"},{"booktitle_meezan":"f];Uj; njhOif","sno":1080,"volume":1,"book":18,"booktitle":"கஸ்ருத் தொழுகை"},{"booktitle_meezan":"j`[;[{j;","sno":1120,"volume":1,"book":19,"booktitle":"தஹஜ்ஜுத்"},{"booktitle_meezan":"kf;fh> kjPdhTila gs;spthapypy; njhOtjd; rpwg;G","sno":1188,"volume":1,"book":20,"booktitle":"மக்கா, மதீனாவுடைய பள்ளிவாயிலில் தொழுவதன் சிறப்பு"},{"booktitle_meezan":"njhOifapy; nra;Ak; gpw nray;fs;","sno":1198,"volume":2,"book":21,"booktitle":"தொழுகையில் செய்யும் பிற செயல்கள்"},{"booktitle_meezan":"njhOifapy; Vw;gLk; kwjp","sno":1224,"volume":2,"book":22,"booktitle":"தொழுகையில் ஏற்படும் மறதி"},{"booktitle_meezan":"[dh]htpd; rl;lq;fs;","sno":1237,"volume":2,"book":23,"booktitle":"ஜனாஸாவின் சட்டங்கள்"},{"booktitle_meezan":"]fhj;jpd; rl;lq;fs;","sno":1395,"volume":2,"book":24,"booktitle":"ஸகாத்தின் சட்டங்கள்"},{"booktitle_meezan":"`[;","sno":1513,"volume":2,"book":25,"booktitle":"ஹஜ்"},{"booktitle_meezan":"ck;uh","sno":1773,"volume":2,"book":26,"booktitle":"உம்ரா"},{"booktitle_meezan":"(`[; nra;tjpypUe;J) jLf;fg;gLjy;","sno":1806,"volume":2,"book":27,"booktitle":"(ஹஜ் செய்வதிலிருந்து) தடுக்கப்படுதல்"},{"booktitle_meezan":"(,`;uhk; mzpe;j epiyapy; jtWjyhf) Ntl;ilahbajw;Fupa gupfhuk;","sno":1821,"volume":2,"book":28,"booktitle":"(இஹ்ராம் அணிந்த நிலையில் தவறுதலாக) வேட்டையாடியதற்குரிய பரிகாரம்"},{"booktitle_meezan":"kjPdhtpd; rpwg;Gfs;","sno":1867,"volume":2,"book":29,"booktitle":"மதீனாவின் சிறப்புகள்"},{"booktitle_meezan":"Nehd;G","sno":1891,"volume":2,"book":30,"booktitle":"நோன்பு"},{"booktitle_meezan":"juhtP`; njhOif","sno":2008,"volume":2,"book":31,"booktitle":"தராவீஹ் தொழுகை"},{"booktitle_meezan":"iyyj;Jy; fj;upd; rpwg;G","sno":2014,"volume":2,"book":32,"booktitle":"லைலத்துல் கத்ரின் சிறப்பு"},{"booktitle_meezan":",/jpfh/g;","sno":2025,"volume":2,"book":33,"booktitle":"இஃதிகாஃப்"},{"booktitle_meezan":"tpahghuk;","sno":2047,"volume":2,"book":34,"booktitle":"வியாபாரம்"},{"booktitle_meezan":"]yk; (tpiyNgrp> Kd;dNu tpiyiaf; nfhLj;J tpLjy;)","sno":2239,"volume":2,"book":35,"booktitle":"ஸலம் (விலைபேசி, முன்னரே விலையைக் கொடுத்து விடுதல்)"},{"booktitle_meezan":"\\{/M (,UtUf;Fr; nrhe;jkhd nrhj;J tpw;gJ)","sno":2257,"volume":2,"book":36,"booktitle":"ஷுஃஆ (இருவருக்குச் சொந்தமான சொத்து விற்பது)"},{"booktitle_meezan":"thlif kw;Wk; $ypf;F Ms; mku;j;Jjy;","sno":2260,"volume":2,"book":37,"booktitle":"வாடகை மற்றும் கூலிக்கு ஆள் அமர்த்துதல்"},{"booktitle_meezan":"`thyh (xUtupd; flid kw;nwhUtUf;F khw;Wjy;)","sno":2287,"volume":2,"book":38,"booktitle":"ஹவாலா (ஒருவரின் கடனை மற்றொருவருக்கு மாற்றுதல்)"},{"booktitle_meezan":"fmghyh (gpizahf;fy;)","sno":2290,"volume":2,"book":39,"booktitle":"கஅபாலா (பிணையாக்கல்)"},{"booktitle_meezan":"tfhyj; (nfhLf;fy; thq;fy;fSf;fhf gpwUf;F mjpfhuk; toq;Fjy;)","sno":2299,"volume":2,"book":40,"booktitle":"வகாலத் (கொடுக்கல் வாங்கல்களுக்காக பிறருக்கு அதிகாரம் வழங்குதல்)"},{"booktitle_meezan":"Ntshz;ikAk; epyf; Fj;jifAk;","sno":2320,"volume":2,"book":41,"booktitle":"வேளாண்மையும் நிலக் குத்தகையும்"},{"booktitle_meezan":"K]hf;fhj; - ePu;g;ghrd mbg;gilapy; Njhg;Gfisf; Fj;jiff;F tpLjy;","sno":2351,"volume":2,"book":42,"booktitle":"முஸாக்காத் - நீர்ப்பாசன அடிப்படையில் தோப்புகளைக் குத்தகைக்கு விடுதல்"},{"booktitle_meezan":"fld;","sno":2385,"volume":2,"book":43,"booktitle":"கடன்"},{"booktitle_meezan":"tof;Ffs; (KiwaPLfs;)> jfuhWfs;","sno":2410,"volume":2,"book":44,"booktitle":"வழக்குகள் (முறையீடுகள்), தகராறுகள்"},{"booktitle_meezan":"fz;nlLf;fg;gl;l nghUs;.","sno":2426,"volume":2,"book":45,"booktitle":"கண்டெடுக்கப்பட்ட பொருள்."},{"booktitle_meezan":"mePjpfSk; mgfupj;jYk;","sno":2440,"volume":2,"book":46,"booktitle":"அநீதிகளும் அபகரித்தலும்"},{"booktitle_meezan":"$l;Lr; NrUjy;","sno":2483,"volume":2,"book":47,"booktitle":"கூட்டுச் சேருதல்"},{"booktitle_meezan":"milkhdk;","sno":2508,"volume":2,"book":48,"booktitle":"அடைமானம்"},{"booktitle_meezan":"mbikia tpLjiy nra;jy;","sno":2517,"volume":2,"book":49,"booktitle":"அடிமையை விடுதலை செய்தல்"},{"booktitle_meezan":"Kfhjg;","sno":2565,"volume":3,"book":50,"booktitle":"முகாதப்"},{"booktitle_meezan":"md;gspg;Gk; mjd; rpwg;Gk;","sno":2614,"volume":3,"book":51,"booktitle":"அன்பளிப்பும் அதன் சிறப்பும்"},{"booktitle_meezan":"rhl;rpaq;fs;","sno":2637,"volume":3,"book":52,"booktitle":"சாட்சியங்கள்"},{"booktitle_meezan":"rkhjhdk;","sno":2690,"volume":3,"book":53,"booktitle":"சமாதானம்"},{"booktitle_meezan":"epge;jidfs;","sno":2711,"volume":3,"book":54,"booktitle":"நிபந்தனைகள்"},{"booktitle_meezan":"kuz rhrdq;fs;","sno":2738,"volume":3,"book":55,"booktitle":"மரண சாசனங்கள்"},{"booktitle_meezan":"mwg;NghUk; mjd; topKiwfSk;","sno":2782,"volume":3,"book":56,"booktitle":"அறப்போரும் அதன் வழிமுறைகளும்"},{"booktitle_meezan":"FK];-Ie;jpnyhU gq;F flik","sno":3091,"volume":3,"book":57,"booktitle":"குமுஸ்-ஐந்திலொரு பங்கு கடமை"},{"booktitle_meezan":"'[p];ah' fhg;Gtup xg;ge;jKk;..","sno":3156,"volume":3,"book":58,"booktitle":"'ஜிஸ்யா' காப்புவரி ஒப்பந்தமும்.."},{"booktitle_meezan":"gilg;gpd; Muk;gk;","sno":3190,"volume":3,"book":59,"booktitle":"படைப்பின் ஆரம்பம்"},{"booktitle_meezan":"egpkhu;fspd; nra;jpfs;","sno":3326,"volume":4,"book":60,"booktitle":"நபிமார்களின் செய்திகள்"},{"booktitle_meezan":"egp(]y;) mtu;fspd;) rpwg;Gfs;","sno":3489,"volume":4,"book":61,"booktitle":"நபி(ஸல்) அவர்களின்) சிறப்புகள்"},{"booktitle_meezan":"egpj; Njhou;fspd; rpwg;Gfs;","sno":3649,"volume":4,"book":62,"booktitle":"நபித் தோழர்களின் சிறப்புகள்"},{"booktitle_meezan":"md;rhupfspd; rpwg;Gfs;","sno":3776,"volume":4,"book":63,"booktitle":"அன்சாரிகளின் சிறப்புகள்"},{"booktitle_meezan":"(egpfshu; fhyj;Jg;)Nghu;fs;","sno":3949,"volume":4,"book":64,"booktitle":"(நபிகளார் காலத்துப்)போர்கள்"},{"booktitle_meezan":"jpUf;Fu;Md; tpsf;fTiu","sno":4474,"volume":5,"book":65,"booktitle":"திருக்குர்ஆன் விளக்கவுரை"},{"booktitle_meezan":"Fu;Mdpd; rpwg;Gfs;","sno":4978,"volume":5,"book":66,"booktitle":"குர்ஆனின் சிறப்புகள்"},{"booktitle_meezan":"jpUkzk;","sno":5063,"volume":5,"book":67,"booktitle":"திருமணம்"},{"booktitle_meezan":"kztpyf;F (jyhf;)","sno":5255,"volume":6,"book":68,"booktitle":"மணவிலக்கு (தலாக்)"},{"booktitle_meezan":"(FLk;gr;) nryTfs;","sno":5351,"volume":6,"book":69,"booktitle":"(குடும்பச்) செலவுகள்"},{"booktitle_meezan":"czT tiffs;","sno":5373,"volume":6,"book":70,"booktitle":"உணவு வகைகள்"},{"booktitle_meezan":"mfPfh","sno":5467,"volume":6,"book":71,"booktitle":"அகீகா"},{"booktitle_meezan":"(cz;gjw;fhf) mWf;fg;gLk; gpuhzpfSk; Ntl;ilg; gpuhzpfSk;","sno":5475,"volume":6,"book":72,"booktitle":"(உண்பதற்காக) அறுக்கப்படும் பிராணிகளும் வேட்டைப் பிராணிகளும்"},{"booktitle_meezan":"Fu;ghdp (jpahf)g; gpuhzpfs;","sno":5545,"volume":6,"book":73,"booktitle":"குர்பானி (தியாக)ப் பிராணிகள்"},{"booktitle_meezan":"Fbghdq;fs;","sno":5575,"volume":6,"book":74,"booktitle":"குடிபானங்கள்"},{"booktitle_meezan":"Nehahspfs;","sno":5640,"volume":6,"book":75,"booktitle":"நோயாளிகள்"},{"booktitle_meezan":"kUj;Jtk;","sno":5678,"volume":6,"book":76,"booktitle":"மருத்துவம்"},{"booktitle_meezan":"Mil mzpfyd;fs;","sno":5783,"volume":6,"book":77,"booktitle":"ஆடை அணிகலன்கள்"},{"booktitle_meezan":"ew;gz;Gfs;","sno":5970,"volume":6,"book":78,"booktitle":"நற்பண்புகள்"},{"booktitle_meezan":"gpuhu;j;jidfs;","sno":6227,"volume":6,"book":79,"booktitle":"பிரார்த்தனைகள்"},{"booktitle_meezan":"gpuhu;j;jidfs;","sno":6304,"volume":6,"book":80,"booktitle":"பிரார்த்தனைகள்"},{"booktitle_meezan":"nefpo;T+l;Lk; mwTiufs;","sno":6412,"volume":7,"book":81,"booktitle":"நெகிழ்வூட்டும் அறவுரைகள்"},{"booktitle_meezan":"(jiy)tpjp","sno":6594,"volume":7,"book":82,"booktitle":"(தலை)விதி"},{"booktitle_meezan":"rj;jpaq;fSk; Neu;j;jpf;fld;fSk;","sno":6621,"volume":7,"book":83,"booktitle":"சத்தியங்களும் நேர்த்திக்கடன்களும்"},{"booktitle_meezan":"rj;jpa (KwpTf;fhd) gupfhuq;fs;","sno":6708,"volume":7,"book":84,"booktitle":"சத்திய (முறிவுக்கான) பரிகாரங்கள்"},{"booktitle_meezan":"ghfg; gpuptpidr; rl;lq;fs;","sno":6723,"volume":7,"book":85,"booktitle":"பாகப் பிரிவினைச் சட்டங்கள்"},{"booktitle_meezan":"Fw;wtpay; jz;lidfs;","sno":6772,"volume":7,"book":86,"booktitle":"குற்றவியல் தண்டனைகள்"},{"booktitle_meezan":",og;gPLfs;","sno":6861,"volume":7,"book":87,"booktitle":"இழப்பீடுகள்"},{"booktitle_meezan":",];yhj;jpypUe;J ntspNawpahu;","sno":6918,"volume":7,"book":88,"booktitle":"இஸ்லாத்திலிருந்து வெளியேறியார்"},{"booktitle_meezan":"(Fw;wq;fs; GupAkhW) epu;g;ge;jpf;f","sno":6940,"volume":7,"book":89,"booktitle":"(குற்றங்கள் புரியுமாறு) நிர்ப்பந்திக்க"},{"booktitle_meezan":"je;jpuq;fs;","sno":6953,"volume":7,"book":90,"booktitle":"தந்திரங்கள்"},{"booktitle_meezan":"fdTf;F tpsf;fkspj;jy;","sno":6982,"volume":7,"book":91,"booktitle":"கனவுக்கு விளக்கமளித்தல்"},{"booktitle_meezan":"Fog;gq;fs; (Nrhjidfs;)","sno":7048,"volume":7,"book":92,"booktitle":"குழப்பங்கள் (சோதனைகள்)"},{"booktitle_meezan":"ePjpAk; epu;thfKk;","sno":7137,"volume":7,"book":93,"booktitle":"நீதியும் நிர்வாகமும்"},{"booktitle_meezan":"vjpu;ghu;g;G","sno":7226,"volume":7,"book":94,"booktitle":"எதிர்பார்ப்பு"},{"booktitle_meezan":"jdpegu; jUk; jfty;fs;","sno":7246,"volume":7,"book":95,"booktitle":"தனிநபர் தரும் தகவல்கள்"},{"booktitle_meezan":",iwNtjj;ijAk; egptopiaAk; filg;gpbj;jy;","sno":7268,"volume":7,"book":96,"booktitle":"இறைவேதத்தையும் நபிவழியையும் கடைப்பிடித்தல்"},{"booktitle_meezan":"Xupiwf; Nfhl;ghL","sno":7371,"volume":7,"book":97,"booktitle":"ஓரிறைக் கோட்பாடு"}
-	]
+  "bmnames": [
+    {
+      "booktitle_meezan": ",iwr;nra;jpapd; Muk;gk;",
+      "sno": 1,
+      "volume": 1,
+      "book": 1,
+      "booktitle": "இறைச்செய்தியின் ஆரம்பம்"
+    },
+    {
+      "booktitle_meezan": "<khd; vDk; ,iwek;gpf;if",
+      "sno": 8,
+      "volume": 1,
+      "book": 2,
+      "booktitle": "ஈமான் எனும் இறைநம்பிக்கை"
+    },
+    {
+      "booktitle_meezan": "fy;tpapd; rpwg;G",
+      "sno": 57,
+      "volume": 1,
+      "book": 3,
+      "booktitle": "கல்வியின் சிறப்பு"
+    },
+    {
+      "booktitle_meezan": "c@r; nra;tJ",
+      "sno": 132,
+      "volume": 1,
+      "book": 4,
+      "booktitle": "உளூச் செய்வது"
+    },
+    {
+      "booktitle_meezan": "Fspj;jy;",
+      "sno": 248,
+      "volume": 1,
+      "book": 5,
+      "booktitle": "குளித்தல்"
+    },
+    {
+      "booktitle_meezan": "khjtplha;",
+      "sno": 294,
+      "volume": 1,
+      "book": 6,
+      "booktitle": "மாதவிடாய்"
+    },
+    {
+      "booktitle_meezan": "jak;Kk;",
+      "sno": 334,
+      "volume": 1,
+      "book": 7,
+      "booktitle": "தயம்மும்"
+    },
+    {
+      "booktitle_meezan": "njhOif",
+      "sno": 349,
+      "volume": 1,
+      "book": 8,
+      "booktitle": "தொழுகை"
+    },
+    {
+      "booktitle_meezan": "njhOif Neuq;fs;",
+      "sno": 521,
+      "volume": 1,
+      "book": 9,
+      "booktitle": "தொழுகை நேரங்கள்"
+    },
+    {
+      "booktitle_meezan": "ghq;F",
+      "sno": 603,
+      "volume": 1,
+      "book": 10,
+      "booktitle": "பாங்கு"
+    },
+    {
+      "booktitle_meezan": "[{k;Mj; njhOif",
+      "sno": 876,
+      "volume": 1,
+      "book": 11,
+      "booktitle": "ஜும்ஆத் தொழுகை"
+    },
+    {
+      "booktitle_meezan": "mr;repiyj; njhOif",
+      "sno": 942,
+      "volume": 1,
+      "book": 12,
+      "booktitle": "அச்சநிலைத் தொழுகை"
+    },
+    {
+      "booktitle_meezan": ",UngUehs;fs;",
+      "sno": 948,
+      "volume": 1,
+      "book": 13,
+      "booktitle": "இருபெருநாள்கள்"
+    },
+    {
+      "booktitle_meezan": "tpj;Uj; njhOif",
+      "sno": 990,
+      "volume": 1,
+      "book": 14,
+      "booktitle": "வித்ருத் தொழுகை"
+    },
+    {
+      "booktitle_meezan": "kio Ntz;Ljy;",
+      "sno": 1005,
+      "volume": 1,
+      "book": 15,
+      "booktitle": "மழை வேண்டுதல்"
+    },
+    {
+      "booktitle_meezan": "fpufzq;fs;",
+      "sno": 1040,
+      "volume": 1,
+      "book": 16,
+      "booktitle": "கிரகணங்கள்"
+    },
+    {
+      "booktitle_meezan": "Fu;MdpYs;s ][;jh trdq;fs;",
+      "sno": 1067,
+      "volume": 1,
+      "book": 17,
+      "booktitle": "குர்ஆனிலுள்ள ஸஜ்தா வசனங்கள்"
+    },
+    {
+      "booktitle_meezan": "f];Uj; njhOif",
+      "sno": 1080,
+      "volume": 1,
+      "book": 18,
+      "booktitle": "கஸ்ருத் தொழுகை"
+    },
+    {
+      "booktitle_meezan": "j`[;[{j;",
+      "sno": 1120,
+      "volume": 1,
+      "book": 19,
+      "booktitle": "தஹஜ்ஜுத்"
+    },
+    {
+      "booktitle_meezan": "kf;fh> kjPdhTila gs;spthapypy; njhOtjd; rpwg;G",
+      "sno": 1188,
+      "volume": 1,
+      "book": 20,
+      "booktitle": "மக்கா, மதீனாவுடைய பள்ளிவாயிலில் தொழுவதன் சிறப்பு"
+    },
+    {
+      "booktitle_meezan": "njhOifapy; nra;Ak; gpw nray;fs;",
+      "sno": 1198,
+      "volume": 2,
+      "book": 21,
+      "booktitle": "தொழுகையில் செய்யும் பிற செயல்கள்"
+    },
+    {
+      "booktitle_meezan": "njhOifapy; Vw;gLk; kwjp",
+      "sno": 1224,
+      "volume": 2,
+      "book": 22,
+      "booktitle": "தொழுகையில் ஏற்படும் மறதி"
+    },
+    {
+      "booktitle_meezan": "[dh]htpd; rl;lq;fs;",
+      "sno": 1237,
+      "volume": 2,
+      "book": 23,
+      "booktitle": "ஜனாஸாவின் சட்டங்கள்"
+    },
+    {
+      "booktitle_meezan": "]fhj;jpd; rl;lq;fs;",
+      "sno": 1395,
+      "volume": 2,
+      "book": 24,
+      "booktitle": "ஸகாத்தின் சட்டங்கள்"
+    },
+    {
+      "booktitle_meezan": "`[;",
+      "sno": 1513,
+      "volume": 2,
+      "book": 25,
+      "booktitle": "ஹஜ்"
+    },
+    {
+      "booktitle_meezan": "ck;uh",
+      "sno": 1773,
+      "volume": 2,
+      "book": 26,
+      "booktitle": "உம்ரா"
+    },
+    {
+      "booktitle_meezan": "(`[; nra;tjpypUe;J) jLf;fg;gLjy;",
+      "sno": 1806,
+      "volume": 2,
+      "book": 27,
+      "booktitle": "(ஹஜ் செய்வதிலிருந்து) தடுக்கப்படுதல்"
+    },
+    {
+      "booktitle_meezan": "(,`;uhk; mzpe;j epiyapy; jtWjyhf) Ntl;ilahbajw;Fupa gupfhuk;",
+      "sno": 1821,
+      "volume": 2,
+      "book": 28,
+      "booktitle": "(இஹ்ராம் அணிந்த நிலையில் தவறுதலாக) வேட்டையாடியதற்குரிய பரிகாரம்"
+    },
+    {
+      "booktitle_meezan": "kjPdhtpd; rpwg;Gfs;",
+      "sno": 1867,
+      "volume": 2,
+      "book": 29,
+      "booktitle": "மதீனாவின் சிறப்புகள்"
+    },
+    {
+      "booktitle_meezan": "Nehd;G",
+      "sno": 1891,
+      "volume": 2,
+      "book": 30,
+      "booktitle": "நோன்பு"
+    },
+    {
+      "booktitle_meezan": "juhtP`; njhOif",
+      "sno": 2008,
+      "volume": 2,
+      "book": 31,
+      "booktitle": "தராவீஹ் தொழுகை"
+    },
+    {
+      "booktitle_meezan": "iyyj;Jy; fj;upd; rpwg;G",
+      "sno": 2014,
+      "volume": 2,
+      "book": 32,
+      "booktitle": "லைலத்துல் கத்ரின் சிறப்பு"
+    },
+    {
+      "booktitle_meezan": ",/jpfh/g;",
+      "sno": 2025,
+      "volume": 2,
+      "book": 33,
+      "booktitle": "இஃதிகாஃப்"
+    },
+    {
+      "booktitle_meezan": "tpahghuk;",
+      "sno": 2047,
+      "volume": 2,
+      "book": 34,
+      "booktitle": "வியாபாரம்"
+    },
+    {
+      "booktitle_meezan": "]yk; (tpiyNgrp> Kd;dNu tpiyiaf; nfhLj;J tpLjy;)",
+      "sno": 2239,
+      "volume": 2,
+      "book": 35,
+      "booktitle": "ஸலம் (விலைபேசி, முன்னரே விலையைக் கொடுத்து விடுதல்)"
+    },
+    {
+      "booktitle_meezan": "\\{/M (,UtUf;Fr; nrhe;jkhd nrhj;J tpw;gJ)",
+      "sno": 2257,
+      "volume": 2,
+      "book": 36,
+      "booktitle": "ஷுஃஆ (இருவருக்குச் சொந்தமான சொத்து விற்பது)"
+    },
+    {
+      "booktitle_meezan": "thlif kw;Wk; $ypf;F Ms; mku;j;Jjy;",
+      "sno": 2260,
+      "volume": 2,
+      "book": 37,
+      "booktitle": "வாடகை மற்றும் கூலிக்கு ஆள் அமர்த்துதல்"
+    },
+    {
+      "booktitle_meezan": "`thyh (xUtupd; flid kw;nwhUtUf;F khw;Wjy;)",
+      "sno": 2287,
+      "volume": 2,
+      "book": 38,
+      "booktitle": "ஹவாலா (ஒருவரின் கடனை மற்றொருவருக்கு மாற்றுதல்)"
+    },
+    {
+      "booktitle_meezan": "fmghyh (gpizahf;fy;)",
+      "sno": 2290,
+      "volume": 2,
+      "book": 39,
+      "booktitle": "கஅபாலா (பிணையாக்கல்)"
+    },
+    {
+      "booktitle_meezan": "tfhyj; (nfhLf;fy; thq;fy;fSf;fhf gpwUf;F mjpfhuk; toq;Fjy;)",
+      "sno": 2299,
+      "volume": 2,
+      "book": 40,
+      "booktitle": "வகாலத் (கொடுக்கல் வாங்கல்களுக்காக பிறருக்கு அதிகாரம் வழங்குதல்)"
+    },
+    {
+      "booktitle_meezan": "Ntshz;ikAk; epyf; Fj;jifAk;",
+      "sno": 2320,
+      "volume": 2,
+      "book": 41,
+      "booktitle": "வேளாண்மையும் நிலக் குத்தகையும்"
+    },
+    {
+      "booktitle_meezan": "K]hf;fhj; - ePu;g;ghrd mbg;gilapy; Njhg;Gfisf; Fj;jiff;F tpLjy;",
+      "sno": 2351,
+      "volume": 2,
+      "book": 42,
+      "booktitle": "முஸாக்காத் - நீர்ப்பாசன அடிப்படையில் தோப்புகளைக் குத்தகைக்கு விடுதல்"
+    },
+    {
+      "booktitle_meezan": "fld;",
+      "sno": 2385,
+      "volume": 2,
+      "book": 43,
+      "booktitle": "கடன்"
+    },
+    {
+      "booktitle_meezan": "tof;Ffs; (KiwaPLfs;)> jfuhWfs;",
+      "sno": 2410,
+      "volume": 2,
+      "book": 44,
+      "booktitle": "வழக்குகள் (முறையீடுகள்), தகராறுகள்"
+    },
+    {
+      "booktitle_meezan": "fz;nlLf;fg;gl;l nghUs;.",
+      "sno": 2426,
+      "volume": 2,
+      "book": 45,
+      "booktitle": "கண்டெடுக்கப்பட்ட பொருள்."
+    },
+    {
+      "booktitle_meezan": "mePjpfSk; mgfupj;jYk;",
+      "sno": 2440,
+      "volume": 2,
+      "book": 46,
+      "booktitle": "அநீதிகளும் அபகரித்தலும்"
+    },
+    {
+      "booktitle_meezan": "$l;Lr; NrUjy;",
+      "sno": 2483,
+      "volume": 2,
+      "book": 47,
+      "booktitle": "கூட்டுச் சேருதல்"
+    },
+    {
+      "booktitle_meezan": "milkhdk;",
+      "sno": 2508,
+      "volume": 2,
+      "book": 48,
+      "booktitle": "அடைமானம்"
+    },
+    {
+      "booktitle_meezan": "mbikia tpLjiy nra;jy;",
+      "sno": 2517,
+      "volume": 2,
+      "book": 49,
+      "booktitle": "அடிமையை விடுதலை செய்தல்"
+    },
+    {
+      "booktitle_meezan": "Kfhjg;",
+      "sno": 2565,
+      "volume": 3,
+      "book": 50,
+      "booktitle": "முகாதப்"
+    },
+    {
+      "booktitle_meezan": "md;gspg;Gk; mjd; rpwg;Gk;",
+      "sno": 2614,
+      "volume": 3,
+      "book": 51,
+      "booktitle": "அன்பளிப்பும் அதன் சிறப்பும்"
+    },
+    {
+      "booktitle_meezan": "rhl;rpaq;fs;",
+      "sno": 2637,
+      "volume": 3,
+      "book": 52,
+      "booktitle": "சாட்சியங்கள்"
+    },
+    {
+      "booktitle_meezan": "rkhjhdk;",
+      "sno": 2690,
+      "volume": 3,
+      "book": 53,
+      "booktitle": "சமாதானம்"
+    },
+    {
+      "booktitle_meezan": "epge;jidfs;",
+      "sno": 2711,
+      "volume": 3,
+      "book": 54,
+      "booktitle": "நிபந்தனைகள்"
+    },
+    {
+      "booktitle_meezan": "kuz rhrdq;fs;",
+      "sno": 2738,
+      "volume": 3,
+      "book": 55,
+      "booktitle": "மரண சாசனங்கள்"
+    },
+    {
+      "booktitle_meezan": "mwg;NghUk; mjd; topKiwfSk;",
+      "sno": 2782,
+      "volume": 3,
+      "book": 56,
+      "booktitle": "அறப்போரும் அதன் வழிமுறைகளும்"
+    },
+    {
+      "booktitle_meezan": "FK];-Ie;jpnyhU gq;F flik",
+      "sno": 3091,
+      "volume": 3,
+      "book": 57,
+      "booktitle": "குமுஸ்-ஐந்திலொரு பங்கு கடமை"
+    },
+    {
+      "booktitle_meezan": "'[p];ah' fhg;Gtup xg;ge;jKk;..",
+      "sno": 3156,
+      "volume": 3,
+      "book": 58,
+      "booktitle": "'ஜிஸ்யா' காப்புவரி ஒப்பந்தமும்.."
+    },
+    {
+      "booktitle_meezan": "gilg;gpd; Muk;gk;",
+      "sno": 3190,
+      "volume": 3,
+      "book": 59,
+      "booktitle": "படைப்பின் ஆரம்பம்"
+    },
+    {
+      "booktitle_meezan": "egpkhu;fspd; nra;jpfs;",
+      "sno": 3326,
+      "volume": 4,
+      "book": 60,
+      "booktitle": "நபிமார்களின் செய்திகள்"
+    },
+    {
+      "booktitle_meezan": "egp(]y;) mtu;fspd;) rpwg;Gfs;",
+      "sno": 3489,
+      "volume": 4,
+      "book": 61,
+      "booktitle": "நபி(ஸல்) அவர்களின்) சிறப்புகள்"
+    },
+    {
+      "booktitle_meezan": "egpj; Njhou;fspd; rpwg;Gfs;",
+      "sno": 3649,
+      "volume": 4,
+      "book": 62,
+      "booktitle": "நபித் தோழர்களின் சிறப்புகள்"
+    },
+    {
+      "booktitle_meezan": "md;rhupfspd; rpwg;Gfs;",
+      "sno": 3776,
+      "volume": 4,
+      "book": 63,
+      "booktitle": "அன்சாரிகளின் சிறப்புகள்"
+    },
+    {
+      "booktitle_meezan": "(egpfshu; fhyj;Jg;)Nghu;fs;",
+      "sno": 3949,
+      "volume": 4,
+      "book": 64,
+      "booktitle": "(நபிகளார் காலத்துப்)போர்கள்"
+    },
+    {
+      "booktitle_meezan": "jpUf;Fu;Md; tpsf;fTiu",
+      "sno": 4474,
+      "volume": 5,
+      "book": 65,
+      "booktitle": "திருக்குர்ஆன் விளக்கவுரை"
+    },
+    {
+      "booktitle_meezan": "Fu;Mdpd; rpwg;Gfs;",
+      "sno": 4978,
+      "volume": 5,
+      "book": 66,
+      "booktitle": "குர்ஆனின் சிறப்புகள்"
+    },
+    {
+      "booktitle_meezan": "jpUkzk;",
+      "sno": 5063,
+      "volume": 5,
+      "book": 67,
+      "booktitle": "திருமணம்"
+    },
+    {
+      "booktitle_meezan": "kztpyf;F (jyhf;)",
+      "sno": 5255,
+      "volume": 6,
+      "book": 68,
+      "booktitle": "மணவிலக்கு (தலாக்)"
+    },
+    {
+      "booktitle_meezan": "(FLk;gr;) nryTfs;",
+      "sno": 5351,
+      "volume": 6,
+      "book": 69,
+      "booktitle": "(குடும்பச்) செலவுகள்"
+    },
+    {
+      "booktitle_meezan": "czT tiffs;",
+      "sno": 5373,
+      "volume": 6,
+      "book": 70,
+      "booktitle": "உணவு வகைகள்"
+    },
+    {
+      "booktitle_meezan": "mfPfh",
+      "sno": 5467,
+      "volume": 6,
+      "book": 71,
+      "booktitle": "அகீகா"
+    },
+    {
+      "booktitle_meezan": "(cz;gjw;fhf) mWf;fg;gLk; gpuhzpfSk; Ntl;ilg; gpuhzpfSk;",
+      "sno": 5475,
+      "volume": 6,
+      "book": 72,
+      "booktitle": "(உண்பதற்காக) அறுக்கப்படும் பிராணிகளும் வேட்டைப் பிராணிகளும்"
+    },
+    {
+      "booktitle_meezan": "Fu;ghdp (jpahf)g; gpuhzpfs;",
+      "sno": 5545,
+      "volume": 6,
+      "book": 73,
+      "booktitle": "குர்பானி (தியாக)ப் பிராணிகள்"
+    },
+    {
+      "booktitle_meezan": "Fbghdq;fs;",
+      "sno": 5575,
+      "volume": 6,
+      "book": 74,
+      "booktitle": "குடிபானங்கள்"
+    },
+    {
+      "booktitle_meezan": "Nehahspfs;",
+      "sno": 5640,
+      "volume": 6,
+      "book": 75,
+      "booktitle": "நோயாளிகள்"
+    },
+    {
+      "booktitle_meezan": "kUj;Jtk;",
+      "sno": 5678,
+      "volume": 6,
+      "book": 76,
+      "booktitle": "மருத்துவம்"
+    },
+    {
+      "booktitle_meezan": "Mil mzpfyd;fs;",
+      "sno": 5783,
+      "volume": 6,
+      "book": 77,
+      "booktitle": "ஆடை அணிகலன்கள்"
+    },
+    {
+      "booktitle_meezan": "ew;gz;Gfs;",
+      "sno": 5970,
+      "volume": 6,
+      "book": 78,
+      "booktitle": "நற்பண்புகள்"
+    },
+    {
+      "booktitle_meezan": "gpuhu;j;jidfs;",
+      "sno": 6227,
+      "volume": 6,
+      "book": 79,
+      "booktitle": "பிரார்த்தனைகள்"
+    },
+    {
+      "booktitle_meezan": "gpuhu;j;jidfs;",
+      "sno": 6304,
+      "volume": 6,
+      "book": 80,
+      "booktitle": "பிரார்த்தனைகள்"
+    },
+    {
+      "booktitle_meezan": "nefpo;T+l;Lk; mwTiufs;",
+      "sno": 6412,
+      "volume": 7,
+      "book": 81,
+      "booktitle": "நெகிழ்வூட்டும் அறவுரைகள்"
+    },
+    {
+      "booktitle_meezan": "(jiy)tpjp",
+      "sno": 6594,
+      "volume": 7,
+      "book": 82,
+      "booktitle": "(தலை)விதி"
+    },
+    {
+      "booktitle_meezan": "rj;jpaq;fSk; Neu;j;jpf;fld;fSk;",
+      "sno": 6621,
+      "volume": 7,
+      "book": 83,
+      "booktitle": "சத்தியங்களும் நேர்த்திக்கடன்களும்"
+    },
+    {
+      "booktitle_meezan": "rj;jpa (KwpTf;fhd) gupfhuq;fs;",
+      "sno": 6708,
+      "volume": 7,
+      "book": 84,
+      "booktitle": "சத்திய (முறிவுக்கான) பரிகாரங்கள்"
+    },
+    {
+      "booktitle_meezan": "ghfg; gpuptpidr; rl;lq;fs;",
+      "sno": 6723,
+      "volume": 7,
+      "book": 85,
+      "booktitle": "பாகப் பிரிவினைச் சட்டங்கள்"
+    },
+    {
+      "booktitle_meezan": "Fw;wtpay; jz;lidfs;",
+      "sno": 6772,
+      "volume": 7,
+      "book": 86,
+      "booktitle": "குற்றவியல் தண்டனைகள்"
+    },
+    {
+      "booktitle_meezan": ",og;gPLfs;",
+      "sno": 6861,
+      "volume": 7,
+      "book": 87,
+      "booktitle": "இழப்பீடுகள்"
+    },
+    {
+      "booktitle_meezan": ",];yhj;jpypUe;J ntspNawpahu;",
+      "sno": 6918,
+      "volume": 7,
+      "book": 88,
+      "booktitle": "இஸ்லாத்திலிருந்து வெளியேறியார்"
+    },
+    {
+      "booktitle_meezan": "(Fw;wq;fs; GupAkhW) epu;g;ge;jpf;f",
+      "sno": 6940,
+      "volume": 7,
+      "book": 89,
+      "booktitle": "(குற்றங்கள் புரியுமாறு) நிர்ப்பந்திக்க"
+    },
+    {
+      "booktitle_meezan": "je;jpuq;fs;",
+      "sno": 6953,
+      "volume": 7,
+      "book": 90,
+      "booktitle": "தந்திரங்கள்"
+    },
+    {
+      "booktitle_meezan": "fdTf;F tpsf;fkspj;jy;",
+      "sno": 6982,
+      "volume": 7,
+      "book": 91,
+      "booktitle": "கனவுக்கு விளக்கமளித்தல்"
+    },
+    {
+      "booktitle_meezan": "Fog;gq;fs; (Nrhjidfs;)",
+      "sno": 7048,
+      "volume": 7,
+      "book": 92,
+      "booktitle": "குழப்பங்கள் (சோதனைகள்)"
+    },
+    {
+      "booktitle_meezan": "ePjpAk; epu;thfKk;",
+      "sno": 7137,
+      "volume": 7,
+      "book": 93,
+      "booktitle": "நீதியும் நிர்வாகமும்"
+    },
+    {
+      "booktitle_meezan": "vjpu;ghu;g;G",
+      "sno": 7226,
+      "volume": 7,
+      "book": 94,
+      "booktitle": "எதிர்பார்ப்பு"
+    },
+    {
+      "booktitle_meezan": "jdpegu; jUk; jfty;fs;",
+      "sno": 7246,
+      "volume": 7,
+      "book": 95,
+      "booktitle": "தனிநபர் தரும் தகவல்கள்"
+    },
+    {
+      "booktitle_meezan": ",iwNtjj;ijAk; egptopiaAk; filg;gpbj;jy;",
+      "sno": 7268,
+      "volume": 7,
+      "book": 96,
+      "booktitle": "இறைவேதத்தையும் நபிவழியையும் கடைப்பிடித்தல்"
+    },
+    {
+      "booktitle_meezan": "Xupiwf; Nfhl;ghL",
+      "sno": 7371,
+      "volume": 7,
+      "book": 97,
+      "booktitle": "ஓரிறைக் கோட்பாடு"
+    }
+  ]
 }

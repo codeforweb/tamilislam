@@ -17,7 +17,7 @@ function renderTemplate(result, compiledVar, outputEl,langCode, surahno, ayath) 
 		if(ayath) result["ayath"] = ayath		
 		dust.render(compiledVar, result, function (err, out) {
 
-			document.querySelector(outputEl).innerHTML = document.getElementById('tblcontainer').innerHTML + out
+			document.querySelector(outputEl).innerHTML += out
 		});
 
 }
