@@ -1,0 +1,42 @@
+---
+title:
+layout: default
+---
+
+<div id='container'>
+	<h1 id="name">ஸஹீஹ் முஸ்லிம்</h1>
+
+	<div id="index-template" style="display: none">			<!-- Dust template -->
+		{#bmnames}
+		    <div class="tblrow">
+		    	<div class="left"> {.book} </div>
+		    	<div class="right"><a href="muslim.html?bookno={.book}">{.bookname}</a></div>
+		    </div>
+		{/bmnames}
+	</div>							<!-- End Dust template -->
+
+	<div id="tblcontainer">								<!-- View /Output -->
+			<div class="tblhead">
+		    	<div class="left">எண்</div>
+		    	<div class="right">அத்தியாயம்</div>
+		    </div>
+		
+	</div>
+</div>
+
+
+<script src="{{ site.baseurl }}/js/dust-full.min.js"></script>
+<script src="{{ site.baseurl }}/js/dust-helpers.js"></script>
+<script src="{{ site.baseurl }}/js/bm.js"></script>
+<script type="text/javascript">
+	onload = function() {
+		var jsonFile = "muslim_head.json";
+		console.log(jsonFile)
+		var source   = document.getElementById('index-template').innerHTML
+		var compiledVar = "bmnames";
+		compileAndRender(source, compiledVar, jsonFile, '#tblcontainer')
+	}
+
+
+</script>
+
