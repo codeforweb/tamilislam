@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto");
+/*@import url("https://fonts.googleapis.com/css?family=Hind+Madurai");*/
+@import url("https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible");
+
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 /*https://fontawesome.com/v4.7.0/icons/*/
 *, *:before, *:after {
@@ -12,7 +14,7 @@ html, body {
 }
 
 body {
-  font: 'Roboto', sans-serif;
+  font-family: 'Atkinson+Hyperlegible, sans-serif';
   color: #333;
   background: #333;
   overflow-x: hidden;
@@ -161,12 +163,12 @@ table th,td {border:solid 1px #fab;}
 	table td {border:solid 1px #fab; width:100px; word-wrap:break-word;}
 */	
 }
-#container{width: 80%;}
+#container{width: 100%;}
 
 #tblcontainer {
     display: table;
      padding: 5px;
-     width: 80%;
+     width: 100%;
     }
 
   .tblrow  {
@@ -250,4 +252,18 @@ input[type=text]:focus {
     margin: 0;
     opacity: 1;
     transition: 0s
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .sidebar {
+    width: 20px;
+    display: none;
+  }
+.content {
+  flex: 1;
+  padding: 10px;
+  }
+.nav ul{line-height:180%}
+
+
 }
