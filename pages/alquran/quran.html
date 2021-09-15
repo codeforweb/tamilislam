@@ -7,8 +7,16 @@ layout: default
 	<button class="searchBtn" onClick="searchQuran()">Search Quran</button>
 
 <div id='container'>
-	<h2 id="name"></h2>
-	<h3 id="translator"></h3>
+
+	<table width="100%" style="margin-top:1rem;">
+	<tr class="tamil1">
+		<td> <span id="prev"></span></td>
+		<td><h2><span id="name"></span> &nbsp; <span id="translator"></span></h2></td>
+		<td><span id="next"></span></td>
+	</tr>
+	</table>
+
+	<!-- <h2 id="name"></h2><h3 id="translator"></h3> -->
 
 	<div id="entry-template" style="display: none">
 		<h2> <a href="index.html?langCode={langCode}">Surah List</a></h2>
@@ -46,17 +54,48 @@ layout: default
 		var langCode = params.get("langCode");
 		var surahno = params.get("surahno");
 		var ayath = params.get("ayath");
+
+		loadtranslationdetails(langCode, surahno);
 		loadQuranVerses(langCode, surahno, ayath);
 	}
 
 	function loadQuranVerses(langCode, surahno, ayath){
 		var jsonFile = langCode + "/"+ langCode + "_" + "quran.json";
-		// console.log(jsonFile)
 		var source   = document.getElementById('entry-template').innerHTML
 		var compiledVar = "quranverses";
 		compileAndRender(source, compiledVar, jsonFile, '#tblcontainer', langCode, surahno, ayath)
 
-	}	
+	}
+
+	function loadtranslationdetails(langCode, surahno){
+				var jsonFile =  "lang.json";
+				fetch(jsonFile)
+				  .then(response => response.json())
+				  .then(data => {
+						var newArray = data.languages.filter(function (el) {
+						  return el.DatabaseID === langCode;
+						});
+						var name = newArray[0].Name;
+						var translator = newArray[0].Translator;
+						document.getElementById('name').innerHTML = name;
+						document.getElementById('translator').innerHTML = translator;
+
+						let url = new URL(document.location)
+						var params = url.searchParams;
+						var surahno = parseInt(params.get('surahno'));
+						params.delete('surahno');
+
+						if(surahno >1){
+
+							document.getElementById('prev').innerHTML = '<a href="'+ url.href + '&surahno='+ (surahno-1) +'"><<< முந்தைய அத்தியாயம் </a>';
+						}
+
+						if(surahno < 114){
+							document.getElementById('next').innerHTML = '<a href="'+ url.href + '&surahno='+ (surahno +1 ) +'"> அடுத்த அத்தியாயம் >>> </a>';
+						}						
+						
+				  	});
+	}
 
 </script>
 
