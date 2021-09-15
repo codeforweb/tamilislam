@@ -8,18 +8,21 @@ layout: default
 
 <div id='container'>
 
-	<table width="100%" style="margin-top:1rem;">
+	<table width="100%" style="margin-top:1rem;text-align: center;border:0px;">
 	<tr class="tamil1">
-		<td> <span id="prev"></span></td>
-		<td><h2><span id="name"></span> &nbsp; <span id="translator"></span></h2></td>
-		<td><span id="next"></span></td>
+		<td style="border:0px;" colspan="3"><h2><span id="name"></span> &nbsp; <span id="translator"></span></h2></td>
 	</tr>
+	<tr>
+		<td style="border:0px;" width="25%"> <span id="prev">&nbsp; </span></td>
+		<td style="border:0px;"> <h2><span id="breadcrumb"></a></span> </h2> </td>
+		<td style="border:0px;" width="25%"><span id="next">&nbsp; </span></td>
+	</tr>
+		
 	</table>
 
 	<!-- <h2 id="name"></h2><h3 id="translator"></h3> -->
 
 	<div id="entry-template" style="display: none">
-		<h2> <a href="index.html?langCode={langCode}">Surah List</a></h2>
 		{#quran}			
 			    <div class="tblrow">
 
@@ -69,6 +72,9 @@ layout: default
 
 	function loadtranslationdetails(langCode, surahno){
 				var jsonFile =  "lang.json";
+				var surahno = parseInt(surahno);
+				var langCode = langCode;
+
 				fetch(jsonFile)
 				  .then(response => response.json())
 				  .then(data => {
@@ -80,19 +86,25 @@ layout: default
 						document.getElementById('name').innerHTML = name;
 						document.getElementById('translator').innerHTML = translator;
 
+						/*
 						let url = new URL(document.location)
 						var params = url.searchParams;
 						var surahno = parseInt(params.get('surahno'));
 						params.delete('surahno');
+						*/
+						var quranindex ='index.html?langCode=' + langCode;				
+						var quranurl = 'quran.html?langCode=' + langCode;
 
 						if(surahno >1){
 
-							document.getElementById('prev').innerHTML = '<a href="'+ url.href + '&surahno='+ (surahno-1) +'"><<< முந்தைய அத்தியாயம் </a>';
+							document.getElementById('prev').innerHTML = '<a href="'+ quranurl + '&surahno='+ (surahno-1) +'"><<< முந்தைய அத்தியாயம் </a>';
 						}
 
 						if(surahno < 114){
-							document.getElementById('next').innerHTML = '<a href="'+ url.href + '&surahno='+ (surahno +1 ) +'"> அடுத்த அத்தியாயம் >>> </a>';
-						}						
+							document.getElementById('next').innerHTML = '<a href="'+ quranurl + '&surahno='+ (surahno +1 ) +'"> அடுத்த அத்தியாயம் >>> </a>';
+						}
+
+					document.getElementById('breadcrumb').innerHTML = '&nbsp;  <a href="{{ site.baseurl }}/"> முகப்பு </a>' +  '--> &nbsp;  <a href="'+ quranindex+'"> அத்தியாயங்கள் </a>';
 						
 				  	});
 	}
