@@ -157,7 +157,7 @@ h2 {
 .hide{display:none}
 .show{display:block}
 
-table th,td {border:solid 1px #fab;}
+table th,td {border:solid 1px #01FF70}
 @media print{
 /*
 	margin:0;padding:0px;
