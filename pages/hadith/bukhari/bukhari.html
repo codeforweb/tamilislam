@@ -65,7 +65,7 @@ layout: default
 
 	function loadHadiths (bookno, hadithnum, hadithtext){
 		var jsonFile = "bukhari.json";
-		console.log(jsonFile);
+		// console.log(jsonFile);
 		var source   = document.getElementById('detail-template').innerHTML
 		var compiledVar = "bhadiths";
 		compileAndRender(source, compiledVar, jsonFile, '#tblcontainer', bookno, hadithnum, hadithtext)

@@ -20,7 +20,7 @@ function renderTemplate(filecontents, compiledVar, outputEl,  bookno, hadithnum,
 		if(hadithnum) filecontents["hadithnum"] = hadithnum
 		if(hadithtext) filecontents["hadithtext"] = hadithtext
 
-		console.log(hadithnum,bookno, hadithtext)	
+		// console.log(hadithnum,bookno, hadithtext)	
 
 		dust.render(compiledVar, filecontents, function (err, out) {
 			document.querySelector(outputEl).innerHTML +=  out;
