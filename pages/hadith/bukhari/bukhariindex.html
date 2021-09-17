@@ -3,10 +3,15 @@ title:
 layout: default
 ---
 
+<form method="get" action="bukhari.html">
+	<input type="text" id="hadithnum" name="hadithnum" placeholder="Hadith no" aria-label="Hadith Number" style="width:10%">
+	<input type="text" id="hadithtext" name="hadithtext" placeholder="Text" aria-label="Hadith Text">
+	<button type="submit" class="searchBtn">புகாரியில் தேடுங்கள்</button>
+</form>
+
+
 <div id='container' class="tamil">
 	<h1 id="name">ஸஹீஹ் புகாரி</h1>
-
-
 	<div id="index-template" style="display: none">			<!-- Dust template -->
 		{#bmnames}
 		    <div class="tblrow">

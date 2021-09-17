@@ -1,5 +1,9 @@
-/*@import url("https://fonts.googleapis.com/css?family=Hind+Madurai");*/
-@import url("https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible");
+
+/*https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@100;200;300;400;500;600;700;800;900&display=swap*/
+/*font-family: 'Noto Sans Tamil', sans-serif;*/
+
+/*@import url("https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible");*/
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans+Tamil&family=Noto+Serif+Tamil&display=swap");
 
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 /*https://fontawesome.com/v4.7.0/icons/*/
@@ -14,7 +18,7 @@ html, body {
 }
 
 body {
-  font-family: 'Atkinson+Hyperlegible,Latha,Helmet,Freesans,Helvetica,Arial,sans-serif';
+  font-family: 'Atkinson+Hyperlegible,Noto Serif Tamil, Noto Sans Tamil, Latha,Helmet,Freesans,Helvetica,Arial,sans-serif';
   color: #333;
   background: #333;
   overflow-x: hidden;

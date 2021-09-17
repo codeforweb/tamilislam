@@ -27,6 +27,8 @@ function renderTemplate(filecontents, compiledVar, outputEl,  bookno, hadithnum,
 		});
 }
 
+/*
+// Form submit is better than this
 function searchHadith(){
 	var params = (new URL(document.location)).searchParams;
 	var hadithnum= document.querySelector('#hadithnum').value;
@@ -42,3 +44,4 @@ function searchHadith(){
 		document.location.replace(url);
 	}	
 }
+*/
