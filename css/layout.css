@@ -51,6 +51,10 @@ body {
   cursor: pointer;
 }
 
+a.button {
+  padding: 12px 26px;
+}
+
 .button:before {
   content: '\f0c9';
   font: 42px fontawesome;
@@ -191,6 +195,9 @@ table th,td {border:solid 1px #01FF70}
       padding: 20px;
       border-bottom: #000000 dotted 1px;
       font-size: 20px   
+    }
+    .number{
+      font-size: 20px;
     }
 
   .left, .right, .middle {

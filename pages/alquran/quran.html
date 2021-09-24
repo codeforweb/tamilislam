@@ -30,7 +30,7 @@ layout: default
      					{@eq key="{.SuraID}" value="{surahno}"}{/eq}
      					{@pte key="{.AyahText}" value="{ayath}"}{/pte}
 			    		{@any}
-			    			<span id="{.VerseID}">{.SuraID}:{.VerseID}</span><br/>
+			    			<span class="number" id="{.VerseID}">{.SuraID}:{.VerseID}</span><br/>
 			    			<div class="ayath">{.AyahText} </div>
 			    		{/any}
 					  {/select}
