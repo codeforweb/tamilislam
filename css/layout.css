@@ -47,12 +47,15 @@ body {
   transform: translate3d(220px, 0, 0);
 }
 
-.button {
+a.button {
   cursor: pointer;
+  padding: 12px 26px;
+  content: '\f0c9';
+
 }
 
-a.button {
-  padding: 12px 26px;
+a.button:focus {
+  outline: 1px dashed red;
 }
 
 .button:before {
