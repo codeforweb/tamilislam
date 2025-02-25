@@ -1,0 +1,212 @@
+---
+title: Monthly Prayer Timetable
+layout: default
+---
+	<style>
+		/*  @import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=Roboto&display=swap");*/		
+		 @import url("https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital@0;1&display=swap");
+		body, tr, form { font-family: "Inclusive Sans", sans-serif; font-size: 16px; color: #404040;  margin: 0; padding: 0}
+		pre {font-family: courier, serif, size: 10pt; margin: 0px 8px;}
+		input {width:250px; font-size: 20px;}
+		.header {background:#aaccee; border-bottom: 1px solid #ddd; padding: 7px; margin-left: 50px;}
+		.caption {font-size: 20px; color: #d95722; text-align: center; width: 10em;}
+		.arrow {font-weight: bold; text-decoration: none; color: #3D3D3D; }
+		.arrow:hover {text-decoration: underline;}
+		.command {font-weight: bold; text-decoration: none; color: #AAAAAA; }
+		.command:hover {text-decoration: underline;}
+		.timetable {width: 70%;  border-width: 1px; border-style: outset; border-collapse: collapse; border-color: gray;}
+		.timetable td {border-width: 1px; border-spacing: 1px; padding: 1px; border-style: inset; border-color: #CCCCCC;}
+		.head-row {color: black; background-color: #eef;}
+		.today-row {background-color: lightyellow;color: black;font-weight: bolder;}
+		.center {margin: 0 auto;}
+		.left1{ margin-left: 50px ;}
+		table.timetable td:nth-child(3), 
+		table.timetable th:nth-child(3) {
+		    color: red;
+		}		
+	</style>
+
+<script type="text/javascript" src="../js/PrayTimes.js"></script>
+
+
+<div class="header">	
+<form class="form">
+	Latitude: <input type="text"  id="latitude" size="2" onchange="displayMonth(0)" />&nbsp;
+	Longitude: <input type="text"  id="longitude" size="2" onchange="displayMonth(0)" />&nbsp;&nbsp;&nbsp;
+
+ 	<fieldset style="width: 500px; display: inline;">
+ 		<legend style="display: inline;">Asr </legend>
+ 		<input type="radio" name="juristic" id="standard" value="Standard"  checked="" onchange="displayMonth(0)"> <label for="standard">Standard </label>
+ 		<input type="radio" name="juristic" id="hanafi" value="Hanafi"  onchange="displayMonth(0)"> <label for="standard">Hanafi </label>
+ 	</fieldset>
+ 	  <button id="clearSession">Clear Location</button>
+
+<!-- 	Method: 
+	<select id="method" size="1" style="font-size: 12px;" onchange="update()">
+		<option value="MWL" selected="selected">Muslim World League (MWL)</option>
+		<option value="ISNA">Islamic Society of North America (ISNA)</option>
+		<option value="Egypt">Egyptian General Authority of Survey</option>
+		<option value="Makkah">Umm al-Qura University, Makkah</option>
+		<option value="Karachi">University of Islamic Sciences, Karachi</option>
+		<option value="Jafari">Shia Ithna-Ashari (Jafari)</option>
+		<option value="Tehran">Institute of Geophysics, University of Tehran</option>
+    </select>
+ --></form>
+</div>
+<br/>
+
+<table class="left1">
+<tr>
+	<td><a href="javascript:displayMonth(-1)" class="arrow">&lt;&lt;</a></td>
+	<td id="table-title" class="caption"></td>
+	<td><a href="javascript:displayMonth(+1)" class="arrow">&gt;&gt;</a></td>
+</tr>
+</table>
+
+<br/>
+<table id="timetable" class="timetable left1">
+	<tbody></tbody>
+</table>
+
+
+<br/><br/>
+
+
+<div id="map" style="margin-left: 100px"></div>
+
+<script type="text/javascript">
+
+var currentDate = new Date();
+var timeFormat = 1; 
+
+window.onload = async () => {
+
+	const getCoords = async () => {
+	    // Check if sessionStorage already has coordinates
+	    const storedCoords = sessionStorage.getItem("coords");
+	    if (storedCoords) {
+	        return JSON.parse(storedCoords);
+	    }
+
+	    // If not, get the location
+	    const pos = await new Promise((resolve, reject) => {
+	        navigator.geolocation.getCurrentPosition(resolve, reject);
+	    });
+
+	    const coords = {
+	        long: pos.coords.longitude,
+	        lat: pos.coords.latitude,
+	    };
+
+	    // Store coordinates in sessionStorage
+	    sessionStorage.setItem("coords", JSON.stringify(coords));
+	    return coords;
+	};
+
+	const coords = await getCoords();
+	// console.table(coords)
+	$('latitude').value = coords.lat
+	$('longitude').value = coords.long
+
+	displayMonth(0);
+
+	//Map
+	const htm ='<iframe width="70%" height="400px" frameborder="0" src="https://maps.google.com/maps?q=' + coords.lat +','+ coords.long+'&hl=en&z=14&amp;output=embed" style="border:0" allowfullscreen></iframe>';
+	$('map').innerHTML=  htm;
+
+
+    //Clear session storage
+    document.getElementById('clearSession').addEventListener('click', () => {
+        sessionStorage.removeItem("coords");
+        document.getElementById('latitude').value = "";
+        document.getElementById('longitude').value = "";
+    });	
+}
+
+
+	// display monthly timetable
+	function displayMonth(offset) {
+
+		const lat = $('latitude').value;
+		const lng = $('longitude').value;
+		const timeZone = 'auto';
+		const dst = 'auto';
+		const format = '12h';
+
+		const Juristic = (document.getElementById('hanafi').checked)? 'Hanafi': 'Standard';
+
+		// var method = $('method').value;
+		// prayTimes.setMethod(method);
+		// prayTimes.setMethod('Makkah');
+
+		prayTimes.adjust( {dhuhr: '5 min', asr: Juristic, maghrib: '3 min'} );
+		currentDate.setMonth(currentDate.getMonth()+ 1* offset);
+		let month = currentDate.getMonth();
+		const year = currentDate.getFullYear();
+		let title = monthFullName(month)+ ' '+ year;
+		$('table-title').innerHTML = title;
+		makeTable(year, month, lat, lng, timeZone, dst, format);
+	}
+
+	// make monthly timetable
+	//http://praytimes.org/code/v2/js/examples/monthly.htm
+	
+	function makeTable(year, month, lat, lng, timeZone, dst, format) {		
+		var items = {day: 'Day', fajr: 'Fajr', sunrise: 'Sunrise', 
+					dhuhr: 'Dhuhr', asr: 'Asr', 
+					maghrib: 'Maghrib', isha: 'Isha'};
+
+				
+		var tbody = document.createElement('tbody');
+		tbody.appendChild(makeTableRow(items, items, 'head-row'));
+
+		var date = new Date(year, month, 1);
+		var endDate = new Date(year, month+ 1, 1);
+
+
+		while (date < endDate) {
+			var times = prayTimes.getTimes(date, [lat, lng], timeZone, dst, format);
+			times.day = date.getDate();
+			var today = new Date(); 
+			var isToday = (date.getMonth() == today.getMonth()) && (date.getDate() == today.getDate());
+			var klass = isToday ? 'today-row' : '';
+			tbody.appendChild(makeTableRow(times, items, klass));
+			date.setDate(date.getDate()+ 1);  // next day
+		}
+		removeAllChild($('timetable'));
+		$('timetable').appendChild(tbody);
+	}
+
+	// make a table row
+	function makeTableRow(data, items, klass) {
+		var row = document.createElement('tr');
+		for (var i in items) {
+			var cell = document.createElement('td');
+			cell.innerHTML = data[i];
+			cell.style.width = i=='day' ? '2.5em' : '3.7em';
+			row.appendChild(cell);
+		}
+		row.className = klass;
+		return row;		
+	}
+
+	// remove all children of a node
+	function removeAllChild(node) {
+		if (node == undefined || node == null)
+			return;
+
+		while (node.firstChild)
+			node.removeChild(node.firstChild);
+	}
+
+	function monthFullName(month) {
+		var monthName = new Array('January', 'February', 'March', 'April', 'May', 'June', 
+						'July', 'August', 'September', 'October', 'November', 'December');
+		return monthName[month];
+	}
+
+	function $(id) {
+		return document.getElementById(id);
+	}
+
+</script>
