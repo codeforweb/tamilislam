@@ -3,7 +3,9 @@ title: Monthly Prayer Timetable
 layout: default
 ---
 	<style>
-		body, tr, form {font-family: tahoma; font-size: 16px; color: #404040;  margin: 0; padding: 0}
+		/*  @import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=Roboto&display=swap");*/		
+		 @import url("https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital@0;1&display=swap");
+		body, tr, form { font-family: "Inclusive Sans", sans-serif; font-size: 16px; color: #404040;  margin: 0; padding: 0}
 		pre {font-family: courier, serif, size: 10pt; margin: 0px 8px;}
 		input {width:250px; font-size: 20px;}
 		.header {background:#aaccee; border-bottom: 1px solid #ddd; padding: 7px; margin-left: 50px;}
@@ -124,10 +126,12 @@ window.onload = async () => {
 
 	// display monthly timetable
 	function displayMonth(offset) {
+
 		const lat = $('latitude').value;
 		const lng = $('longitude').value;
 		const timeZone = 'auto';
 		const dst = 'auto';
+		const format = '12h';
 
 		const Juristic = (document.getElementById('hanafi').checked)? 'Hanafi': 'Standard';
 
@@ -141,13 +145,13 @@ window.onload = async () => {
 		const year = currentDate.getFullYear();
 		let title = monthFullName(month)+ ' '+ year;
 		$('table-title').innerHTML = title;
-		makeTable(year, month, lat, lng, timeZone, dst);
+		makeTable(year, month, lat, lng, timeZone, dst, format);
 	}
 
 	// make monthly timetable
 	//http://praytimes.org/code/v2/js/examples/monthly.htm
 	
-	function makeTable(year, month, lat, lng, timeZone, dst) {		
+	function makeTable(year, month, lat, lng, timeZone, dst, format) {		
 		var items = {day: 'Day', fajr: 'Fajr', sunrise: 'Sunrise', 
 					dhuhr: 'Dhuhr', asr: 'Asr', 
 					maghrib: 'Maghrib', isha: 'Isha'};
@@ -158,7 +162,7 @@ window.onload = async () => {
 
 		var date = new Date(year, month, 1);
 		var endDate = new Date(year, month+ 1, 1);
-		var format = timeFormat ? '12hNS' : '24h';
+
 
 		while (date < endDate) {
 			var times = prayTimes.getTimes(date, [lat, lng], timeZone, dst, format);
