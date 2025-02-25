@@ -23,7 +23,12 @@ layout: default
 		table.timetable td:nth-child(3), 
 		table.timetable th:nth-child(3) {
 		    color: red;
-		}		
+		}	
+
+#timetable1 {border-width: 1px; border-style: outset; border-collapse: collapse; border-color: gray; width: 9em;}
+#timetable1 td, #timetable th {border-width: 1px; border-spacing: 1px; padding: 2px 4px; border-style: inset; border-color: #CCCCCC;}
+#timetable1 th {color:black; text-align: center; font-weight: bold; background-color: #F8F7F4;}
+
 	</style>
 
 <script type="text/javascript" src="../js/PrayTimes.js"></script>
@@ -36,8 +41,8 @@ layout: default
 
  	<fieldset style="width: 500px; display: inline;">
  		<legend style="display: inline;">Asr </legend>
- 		<input type="radio" name="juristic" id="standard" value="Standard"  checked="" onchange="displayMonth(0)"> <label for="standard">Standard </label>
- 		<input type="radio" name="juristic" id="hanafi" value="Hanafi"  onchange="displayMonth(0)"> <label for="standard">Hanafi </label>
+ 		<input type="radio" name="juristic" id="standard" value="Standard"  checked="" onchange="displayDay();displayMonth(0)"> <label for="standard">Standard </label>
+ 		<input type="radio" name="juristic" id="hanafi" value="Hanafi"  onchange="displayDay();displayMonth(0)"> <label for="standard">Hanafi </label>
  	</fieldset>
  	  <button id="clearSession">Clear Location</button>
 
@@ -62,6 +67,12 @@ layout: default
 	<td><a href="javascript:displayMonth(+1)" class="arrow">&gt;&gt;</a></td>
 </tr>
 </table>
+
+<br/>
+<div align="" id="dailyTimetable" style="margin-left:100px">
+	
+
+</div>
 
 <br/>
 <table id="timetable" class="timetable left1">
@@ -108,6 +119,7 @@ window.onload = async () => {
 	$('latitude').value = coords.lat
 	$('longitude').value = coords.long
 
+	displayDay();
 	displayMonth(0);
 
 	//Map
@@ -122,7 +134,24 @@ window.onload = async () => {
         document.getElementById('longitude').value = "";
     });	
 }
+	const displayDay=()=>{
+		var date = new Date(); // today
+		prayTimes.adjust( {dhuhr: '5 min', asr: (document.getElementById('hanafi').checked)? 'Hanafi': 'Standard', maghrib: '3 min'} );
+		var times = prayTimes.getTimes(date, [$('latitude').value, $('longitude').value],'auto','auto','12h');
+		// var times = prayTimes.getTimes(date, [43, -80], -5);
+		console.log(times)
+		var list = ['Fajr', 'Sunrise', 'Dhuhr', 'Asr', 'Maghrib', 'Isha', 'Midnight'];
 
+		var html = '<table id="timetable1">';
+		html += '<tr><th colspan="2">'+ date.toLocaleDateString()+ '</th></tr><tr>';
+
+		for(var i in list)	{
+			html += '<td>'+ list[i]+ '</td>';
+			html += '<td>'+ times[list[i].toLowerCase()]+ '</td>';
+		}
+		html += '</tr></table>';
+		document.getElementById('dailyTimetable').innerHTML = html;
+	}
 
 	// display monthly timetable
 	function displayMonth(offset) {
