@@ -18,6 +18,10 @@ layout: default
 		.today-row {background-color: lightyellow;color: black;font-weight: bolder;}
 		.center {margin: 0 auto;}
 		.left1{ margin-left: 50px ;}
+		table.timetable td:nth-child(3), 
+		table.timetable th:nth-child(3) {
+		    color: red;
+		}		
 	</style>
 
 <script type="text/javascript" src="../js/PrayTimes.js"></script>
@@ -33,6 +37,7 @@ layout: default
  		<input type="radio" name="juristic" id="standard" value="Standard"  checked="" onchange="displayMonth(0)"> <label for="standard">Standard </label>
  		<input type="radio" name="juristic" id="hanafi" value="Hanafi"  onchange="displayMonth(0)"> <label for="standard">Hanafi </label>
  	</fieldset>
+ 	  <button id="clearSession">Clear Location</button>
 
 <!-- 	Method: 
 	<select id="method" size="1" style="font-size: 12px;" onchange="update()">
@@ -73,28 +78,50 @@ var currentDate = new Date();
 var timeFormat = 1; 
 
 window.onload = async () => {
+
 	const getCoords = async () => {
-	        const pos = await new Promise((resolve, reject) => {
-	          navigator.geolocation.getCurrentPosition(resolve, reject);
-	        });
-	    
-	        return {
-	          long: pos.coords.longitude,
-	          lat: pos.coords.latitude,
-	        };
+	    // Check if sessionStorage already has coordinates
+	    const storedCoords = sessionStorage.getItem("coords");
+	    if (storedCoords) {
+	        return JSON.parse(storedCoords);
+	    }
+
+	    // If not, get the location
+	    const pos = await new Promise((resolve, reject) => {
+	        navigator.geolocation.getCurrentPosition(resolve, reject);
+	    });
+
+	    const coords = {
+	        long: pos.coords.longitude,
+	        lat: pos.coords.latitude,
 	    };
 
+	    // Store coordinates in sessionStorage
+	    sessionStorage.setItem("coords", JSON.stringify(coords));
+	    return coords;
+	};
+
 	const coords = await getCoords();
-	// console.table(coords)
+	console.table(coords)
 	$('latitude').value = coords.lat
 	$('longitude').value = coords.long
 
 	displayMonth(0);
 
+	//Map
+	const htm ='<iframe width="70%" height="400px" frameborder="0" src="https://maps.google.com/maps?q=' + coords.lat +','+ coords.long+'&hl=en&z=14&amp;output=embed" style="border:0" allowfullscreen></iframe>';
+	$('map').innerHTML=  htm;
 
-		const htm ='<iframe width="70%" height="400px" frameborder="0" src="https://maps.google.com/maps?q=' + coords.lat +','+ coords.long+'&hl=en&z=14&amp;output=embed" style="border:0" allowfullscreen></iframe>';
-		$('map').innerHTML=  htm;
+
+    //Clear session storage
+    document.getElementById('clearSession').addEventListener('click', () => {
+        sessionStorage.removeItem("coords");
+        document.getElementById('latitude').value = "";
+        document.getElementById('longitude').value = "";
+    });	
 }
+
+
 	// display monthly timetable
 	function displayMonth(offset) {
 		const lat = $('latitude').value;
@@ -117,10 +144,13 @@ window.onload = async () => {
 	}
 
 	// make monthly timetable
+	//http://praytimes.org/code/v2/js/examples/monthly.htm
+	
 	function makeTable(year, month, lat, lng, timeZone, dst) {		
 		var items = {day: 'Day', fajr: 'Fajr', sunrise: 'Sunrise', 
 					dhuhr: 'Dhuhr', asr: 'Asr', 
 					maghrib: 'Maghrib', isha: 'Isha'};
+
 				
 		var tbody = document.createElement('tbody');
 		tbody.appendChild(makeTableRow(items, items, 'head-row'));
