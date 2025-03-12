@@ -25,14 +25,14 @@ layout: default
 		    color: red;
 		}	
 
-#timetable1 {border-width: 1px; border-style: outset; border-collapse: collapse; border-color: gray; width: 9em;}
-#timetable1 td, #timetable th {border-width: 1px; border-spacing: 1px; padding: 2px 4px; border-style: inset; border-color: #CCCCCC;}
+#timetable1 {border-width: 1px; border-style: outset; border-collapse: collapse; border-color: blue; width: 70%}
+#timetable1 td, #timetable th {border-width: 1px; border-spacing: 1px; padding: 2px 4px; border-style: inset; border-color: blue;}
 #timetable1 th {color:black; text-align: center; font-weight: bold; background-color: #F8F7F4;}
 
 	</style>
 
 <script type="text/javascript" src="../js/PrayTimes.js"></script>
-
+<script type="text/javascript" src="../js/astro.js"></script>
 
 <div class="header">	
 <form class="form">
@@ -70,8 +70,6 @@ layout: default
 
 <br/>
 <div align="" id="dailyTimetable" style="margin-left:100px">
-	
-
 </div>
 
 <br/>
@@ -136,20 +134,31 @@ window.onload = async () => {
 }
 	const displayDay=()=>{
 		var date = new Date(); // today
+
+		/**   A S T R O  L I B   **/
+		const observer = new Astronomy.Observer(parseFloat($('latitude').value), parseFloat($('longitude').value), 0);
+		let sunrise  = Astronomy.SearchRiseSet('Sun',  observer, +1, date, 300);
+		let sunset   = Astronomy.SearchRiseSet('Sun',  observer, -1, date, 300);
+		sunrise = FormatDate(sunrise.date)
+		sunset = FormatDate(sunset.date)
+		/**   A S T R O  L I B   **/
+
 		prayTimes.adjust( {dhuhr: '5 min', asr: (document.getElementById('hanafi').checked)? 'Hanafi': 'Standard', maghrib: '3 min'} );
 		var times = prayTimes.getTimes(date, [$('latitude').value, $('longitude').value],'auto','auto','12h');
 		// var times = prayTimes.getTimes(date, [43, -80], -5);
 		console.log(times)
-		var list = ['Fajr', 'Sunrise', 'Dhuhr', 'Asr', 'Maghrib', 'Isha', 'Midnight'];
+		// var list = ['Fajr', 'Sunrise', 'Dhuhr', 'Asr', 'Maghrib', 'Isha', 'Midnight'];
+		var list = ['Fajr', 'Dhuhr', 'Asr', 'Maghrib', 'Isha'];
 
 		var html = '<table id="timetable1">';
 		html += '<tr><th colspan="14">'+ date.toDateString()+ '</th></tr><tr>';
 		//FormattedDate(date, "d/m/y")
 
 		for(var i in list)	{
-			html += '<td>'+ list[i]+ '</td>';
-			html += '<td>'+ times[list[i].toLowerCase()]+ '</td>';
+			html += '<td><b>'+ list[i];
+			html += '</b>: '+ times[list[i].toLowerCase()]+ '</td>';
 		}
+		html += `<td><b>Sunrise</b>: ${sunrise}</td><td><b>Sunset</b>: ${sunset}</td>`;
 		html += '</tr></table>';
 		document.getElementById('dailyTimetable').innerHTML = html;
 	}
@@ -245,6 +254,24 @@ window.onload = async () => {
 	        return parseInt(date["ymdhis".indexOf(letter)]);
 	    });
 	}
+    function Pad(s, w) {
+        s = s.toFixed(0);
+        while (s.length < w) {
+            s = '0' + s;
+        }
+        return s;
+    }	
+    function FormatDate(date) {
+        var year = Pad(date.getFullYear(), 4);
+        var month = Pad(1 + date.getMonth(), 2);
+        var day = Pad(date.getDate(), 2);
+        var hour24 = Pad(date.getHours(), 2);
+    	const hour12 = hour24 % 12 || 12; // Handle midnight (0 becomes 12)
+	    const period = hour24 < 12 ? 'AM' : 'PM';
 
+        var minute = Pad(date.getMinutes(), 2);
+        var second = Pad(date.getSeconds(), 2);
+        return `${year}-${month}-${day} ${hour12}:${minute}:${second} ${period}`;
+    }
 
 </script>
