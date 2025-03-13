@@ -2,8 +2,7 @@
 title: நவவி நாற்பது ஹதீஸ்
 layout: default
 ---
-
-<div id='container'>
+<div id='container' class="nawawi">
 	<p class="tamil1">
 	அளவற்ற அருளாளனும் நிகரற்ற அன்புடையோனுமாகிய அல்லாஹ்வின் திருப்பெயரால் ஆரம்பம். 
 	</p>
@@ -753,12 +752,12 @@ layout: default
 		}
 	}
 
-	var elems=document.getElementsByClassName('notes');
+	var elems=document.querySelectorAll('.nawawi .notes');
 	for(i=0,j=elems.length; i<j;i++){
 		 var elem= elems[i];
 		addClass(elems[i],'hide');
 	}
-	var elems=document.getElementsByClassName('arabic');
+	var elems=document.querySelectorAll('.nawawi .arabic');
 	for(i=0,j=elems.length; i<j;i++){
 		 var elem= elems[i];
 		 addClass(elems[i],'hide');
@@ -766,7 +765,7 @@ layout: default
 
 	}
 
-	var elems=document.getElementsByClassName('tamil');
+	var elems=document.querySelectorAll('.nawawi .tamil');
 	for(i=0,j=elems.length; i<j;i++){
 		 var elem= elems[i];
 		if(elem.tagName.toLowerCase()!='h2'){		
