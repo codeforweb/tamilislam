@@ -17,6 +17,16 @@ html, body {
   height: 100vh;
 }
 
+html {
+    scrollbar-color: #ff69b4 #0000ff;
+    scrollbar-width: auto;
+    scrollbar-gutter: stable both-edges;
+}
+html::-webkit-scrollbar {  width: 12px;}
+html::-webkit-scrollbar-track {background: #0000ff;}
+html::-webkit-scrollbar-thumb {background: #ff69b4;}
+
+
 body {
   font-family: 'Atkinson+Hyperlegible,Noto Serif Tamil, Noto Sans Tamil, Latha,Helmet,Freesans,Helvetica,Arial,sans-serif';
   color: #333;
