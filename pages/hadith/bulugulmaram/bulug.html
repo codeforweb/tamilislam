@@ -1,0 +1,76 @@
+---
+title:
+layout: default
+---
+	
+	<h1 id="name">புலுகுல் மராம்</h1>
+	<h2> 
+		<a href="../index.html">ஹதீஸ்</a> --> <a href="bulugIndex.html">அத்தியாயங்கள்</a>
+	</h2>
+
+	<form method="get" action="bulug.html">
+		<input type="text" id="hadithnum" name="hadithnum" placeholder="Hadith no" aria-label="Hadith Number" style="width:10%">
+		<input type="text" id="hadithtext" name="hadithtext" placeholder="Text" aria-label="Hadith Text">
+		<button type="submit" class="searchBtn">புலுகுல் மராமில் தேடுங்கள்</button>
+	</form>
+
+<div id='container' class="tamil">
+
+	<div id="detail-template" style="display: none">
+		
+		{#bhadiths}	
+			    <div class="tblrow">
+
+			    	<!-- filtering results -->
+
+					{@select}
+						{@eq key="{.book}" value="{bookno}"}{/eq}
+     					{@eq key="{.hno}" value="{hadithnum}"}{/eq}
+     					{@pte key="{.tcontent}" value="{hadithtext}"}{/pte}
+     					{@pte key="{.arabiccontent}" value="{hadithtext}"}{/pte}
+     					
+			    		{@any}
+
+			    			<div>{.title}</div>
+			    			<div>{.hno}</div>
+			    			<p class="arabic " lang="AR-SA">{.arabiccontent}</p>
+			    			<p class="tamil ">{.tcontent}</p>
+			    			<hr style="border: 1px dotted blue;margin-top: 15px;">
+			    		{/any}
+					  {/select}
+			    </div>	    
+		{/bhadiths}
+	</div>
+
+	<div id="tblcontainer">
+			<div class="tblhead">
+		    	<div class="hadiths">&nbsp;</div>
+		    </div>
+		
+	</div>
+</div>
+
+
+<script src="{{ site.baseurl }}/js/dust-full.min.js"></script>
+<script src="{{ site.baseurl }}/js/dust-helpers.js"></script>
+<script src="{{ site.baseurl }}/js/bm.js"></script>
+<script type="text/javascript">
+
+	onload = function() {
+		var params = (new URL(document.location)).searchParams;
+		var bookno = params.get("bookno");
+		var hadithnum = params.get("hadithnum");
+		var hadithtext = params.get("hadithtext");
+		loadHadiths(bookno, hadithnum, hadithtext);
+	}
+
+	function loadHadiths (bookno, hadithnum, hadithtext){
+		var jsonFile = "bulug.json";
+		var source   = document.getElementById('detail-template').innerHTML
+		var compiledVar = "bhadiths";
+		compileAndRender(source, compiledVar, jsonFile, '#tblcontainer', bookno, hadithnum, hadithtext)
+
+	}	
+
+</script>
+

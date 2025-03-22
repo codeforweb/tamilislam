@@ -1,0 +1,47 @@
+---
+title: 
+layout: default
+---
+
+<form method="get" action="bulug.html">
+	<input type="text" id="hadithnum" name="hadithnum" placeholder="Hadith no" aria-label="Hadith Number" style="width:10%">
+	<input type="text" id="hadithtext" name="hadithtext" placeholder="Text" aria-label="Hadith Text">
+	<button type="submit" class="searchBtn">புலுகுல் மராமில் தேடுங்கள்</button>
+</form>
+
+<div id='container' class="tamil">
+	<h1 id="name">புலுகுல் மராம்</h1>
+
+	<div id="index-template" style="display: none">			<!-- Dust template -->
+		{#bmnames}
+		    <div class="tblrow">
+		    	<div class="left number"> {.sno} </div>
+		    	<div class="right"><a href="bulug.html?bookno={.sno}">{.booktitle}</a></div>
+		    </div>
+		{/bmnames}
+	</div>							<!-- End Dust template -->
+
+	<div id="tblcontainer">								<!-- View /Output -->
+			<div class="tblhead">
+		    	<div class="left">எண்</div>
+		    	<div class="right">அத்தியாயம்</div>
+		    </div>
+		
+	</div>
+</div>
+
+
+<script src="{{ site.baseurl }}/js/dust-full.min.js"></script>
+<script src="{{ site.baseurl }}/js/dust-helpers.js"></script>
+<script src="{{ site.baseurl }}/js/bm.js"></script>
+<script type="text/javascript">
+	onload = function() {
+		var jsonFile = "bulug_head.json";
+		var source   = document.getElementById('index-template').innerHTML
+		var compiledVar = "bmnames";
+		compileAndRender(source, compiledVar, jsonFile, '#tblcontainer')
+	}
+
+
+</script>
+
