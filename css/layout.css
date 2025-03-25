@@ -6,7 +6,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans+Tamil&family=Noto+Serif+Tamil&display=swap");
 
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
-/*https://fontawesome.com/v4.7.0/icons/*/
+
+/*See https://fontawesome.com/v4.7.0/icons/*/
+
 *, *:before, *:after {
   margin: 0;
   padding: 0;
@@ -28,7 +30,7 @@ html::-webkit-scrollbar-thumb {background: #ff69b4;}
 
 
 body {
-  font-family: 'Atkinson+Hyperlegible,Noto Serif Tamil, Noto Sans Tamil, Latha,Helmet,Freesans,Helvetica,Arial,sans-serif';
+  font-family: 'Noto Serif Tamil, Noto Sans Tamil, Latha,Helmet, Atkinson Hyperlegible, Freesans,Helvetica,Arial,sans-serif';
   color: #333;
   background: #333;
   overflow-x: hidden;
@@ -106,34 +108,34 @@ a.button:focus {
 }
 
 .nav li:nth-child(2) a:before {
-  content: "\f21e";
+  content: "\f0b1";
 }
 
 .nav li:nth-child(3) a:before {
-  content: "\f212";
+  content: "\f21e";
 }
 
 .nav li:nth-child(4) a:before {
+  content: "\f212";
+}
+
+.nav li:nth-child(5) a:before {
   content: '\f073';
 
 }
 
-.nav li:nth-child(5) a:before {
-  content: '\f022';
-}
-
 .nav li:nth-child(6) a:before {
-  content: '\f115';
+  content: '\f11c';
 }
 
 .nav li:nth-child(7) a:before {
-  content: '\f085';
+  content: '\f186';
 }
 
 .nav li:nth-child(8) a:before {
-  content: '\f023';
-  left: 23px;
+  content: '\f115';
 }
+
 
 .nav li a:hover {
   background: #444;
@@ -150,6 +152,7 @@ a.button:focus {
   top: 12px;
   left: 37px;  
   content: "\f015";
+  margin-left:-15px
 }
 
 /* Demo Description */
@@ -228,7 +231,7 @@ input[type=text]{
     transition: width 0.4s ease-in-out;
   font-size: 16px;
     background-color: white;
-    background-image: url(../img/searchicon.png);
+/*    background-image: url(../img/searchicon.png);*/
     background-position: 10px 10px;
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;    
@@ -294,3 +297,22 @@ input[type=text]:focus {
 .pagelist ul{line-height:180%}
 
 }
+
+#searchForm legend {
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+#searchForm label {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+ #searchForm select, input {
+            width: 30%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }               

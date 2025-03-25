@@ -1,0 +1,83 @@
+---
+title: 
+layout: default
+---
+
+	<div class="select">
+		<select id="langCode" required autofocus>
+			<option value="ta">Tamil</option>
+			<option value="en">English</option>
+		</select> 
+	</div>
+	
+	<br><br>
+
+
+<div id='container'>
+	<h2 id="name">தஃப்சீர் இப்னு கஸீர்</h2> <br>
+
+	<div id="index-template" style="display: none">
+{@select key=langCode}
+  {@eq value="en"}  
+    {#surahnames}
+		    <div class="tblrow">
+		    	<div class="left number"><a href="tafsir.html?langCode={langCode}&surahno={.surano}">{.surano}</a></div>
+		    	<div class="right"><a href="tafsir.html?langCode={langCode}&surahno={.surano}">{name_en}</a></div>
+		    </div>
+
+    {/surahnames}
+  {/eq}
+  {@eq value="ta"}
+    {#surahnames}
+      		    <div class="tblrow">
+		    	<div class="left number"><a href="tafsir.html?langCode={langCode}&surahno={.surano}">{.surano}</a></div>
+		    	<div class="right"><a href="tafsir.html?langCode={langCode}&surahno={.surano}">{name_ta}</a></div>
+		    </div>
+
+    {/surahnames}
+  {/eq}
+{/select}		
+		<input type="hidden" id="txtLang" value="{langCode}">
+
+	</div>
+
+
+
+	<div id="tblcontainer">
+			<div class="tblhead">
+		    	<div class="left">Number</div>
+		    	<div class="right">Surah Name</div>
+		    </div>
+		
+	</div>
+</div>
+
+
+<script src="{{ site.baseurl }}/js/dust-full.min.js"></script>
+<script src="{{ site.baseurl }}/js/dust-helpers.min.js"></script>
+<script src="{{ site.baseurl }}/js/main.js"></script>
+<script type="text/javascript">
+
+	onload = function()
+	{
+		var params = (new URL(document.location)).searchParams;
+		let langCode = params.get("langCode") || 'ta';
+		document.getElementById('langCode').value = langCode;
+		console.log(langCode)
+		var jsonFile = "ibnkathir/surahnames.json";
+		var source   = document.getElementById('index-template').innerHTML
+		var compiledVar = "surahnames";
+		compileAndRender(source, compiledVar, jsonFile, '#tblcontainer', langCode)
+		document.getElementById('langCode').addEventListener('change',changeLang);
+	}	
+
+
+
+
+
+
+
+
+
+</script>
+

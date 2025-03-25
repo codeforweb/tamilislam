@@ -1,0 +1,187 @@
+---
+title:
+layout: default
+---
+
+<form id="searchForm">
+    <fieldset>
+        <legend>Search Parameters</legend>
+
+        <!-- Language Selection -->
+        
+        <label for="langCode">Language:</label>
+        <select id="langCode" name="langCode">
+            <option value="en">English</option>
+            <option value="ta">Tamil</option>
+        </select>
+        <br>
+        <!-- Surah Number Input -->
+        <label for="surahno">Surah Number:</label>
+        <input type="number" id="surahno" name="surahno" min="1">
+        <br>
+
+        <!-- Ayah Number Input -->
+        <label for="ayathno">Ayah Number:</label>
+        <input type="number" id="ayathno" name="ayathno" min="1">
+        <br>
+
+        <!-- Text Search Input -->
+        <label for="text">Search Text:</label>
+        <input type="text" id="text" name="text">
+        <br>
+
+        <!-- Submit Button -->
+        <button type="submit" class="searchBtn">Search</button>
+    </fieldset>
+</form>
+
+<!-- Display results here -->
+<div id="content"></div>
+
+
+<div id='container'>
+
+	<table width="100%" style="margin-top:1rem;text-align: center;border:0px;">
+	<tr class="tamil1">
+		<td style="border:0px;" colspan="3"><h2>தஃப்சீர் இப்னு கஸீர்</h2></td>
+	</tr>
+	<tr>
+		<td style="border:0px;" width="25%"> <span id="prev">&nbsp; </span></td>
+		<td style="border:0px;"> <h2><span id="breadcrumb"></a></span> </h2> </td>
+		<td style="border:0px;" width="25%"><span id="next">&nbsp; </span></td>
+	</tr>
+		
+	</table>
+
+	<!-- <h2 id="name"></h2><h3 id="translator"></h3> -->
+
+<div id="entry-template" style="display: none">
+    
+        {#filteredData} <!-- Only show filtered results -->
+        <div class="tblrow">
+            <span class="number">{sura}:{ayah}</span><br/>
+            {@select key=langCode}
+                {@eq value="en"}  
+    				<div class="ayath">{eng_text|s} </div>
+                {/eq}
+                {@eq value="ta"}  
+	    			<div class="ayath">{tamil_text|s} </div>
+				{/eq}
+            {/select}
+          </div>
+        {/filteredData}
+    
+</div>
+
+	<div id="tblcontainer">
+			<div class="tblhead">
+		    	<div class="ayath">&nbsp;</div>
+		    </div>
+		
+	</div>
+</div>
+
+
+<script src="{{ site.baseurl }}/js/dust-full.min.js"></script>
+<script src="{{ site.baseurl }}/js/dust-helpers.js"></script>
+<script src="{{ site.baseurl }}/js/main.js"></script>
+<script type="text/javascript">
+
+document.addEventListener("DOMContentLoaded", async function () {
+    // Read JSON data
+    const response = await fetch("ibnkathir/tafsir_ibn_kathir.json");
+    const jsonData = await response.json();
+
+    // Get URL parameters
+    const params = new URLSearchParams(window.location.search);
+    const langCode = params.get("langCode") || 'ta';
+    let surahno = params.get("surahno");
+    const ayathno = params.get("ayathno");
+ 	const searchText = params.get("text");
+
+ 	document.getElementById("langCode").value = langCode;
+ 	if(surahno) document.getElementById("surahno").value = surahno;
+ 	if(ayathno)  document.getElementById("ayathno").value = ayathno;
+ 	if(searchText) document.getElementById("text").value = searchText;
+
+ 	// if(!ayathno && !searchText) surahno=1;	//default to first surah if there is no search
+
+	showIndex (langCode, surahno)
+
+    let filteredData = jsonData;
+    // 1. Match surah number (if provided)
+    if (surahno) {
+        filteredData = filteredData.filter(ayah => ayah.sura == surahno);
+    }
+
+    // 2. Match ayah number (if provided)
+    if (ayathno) {
+        filteredData = filteredData.filter(ayah => ayah.ayah == ayathno);
+    }
+
+    // 3. Match search text (if provided)
+    if (searchText) {
+        filteredData = filteredData.filter(ayah => {
+            const textToSearch = langCode === "ta" ? ayah.tamil_text : ayah.eng_text;
+            return textToSearch && textToSearch.toLowerCase().includes(searchText.toLowerCase());
+        });
+    }
+
+
+    // Compile and render the Dust.js template
+    const template = document.getElementById("entry-template").innerHTML;
+    const compiled = dust.compile(template, "ayahDisplay");
+    dust.loadSource(compiled);
+
+    dust.render("ayahDisplay", { filteredData, langCode }, function (err, out) {
+        if (err) {
+            console.error("Dust rendering error:", err);
+        } else {
+            document.getElementById("tblcontainer").innerHTML += out; 
+        }
+    });
+});
+
+document.getElementById("searchForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent page reload
+
+    // Get form values
+    const langCode = document.getElementById("langCode").value;
+    const surahno = document.getElementById("surahno").value;
+    const ayathno = document.getElementById("ayathno").value;
+    const searchText = document.getElementById("text").value;
+
+    // Build the query string
+    const queryParams = new URLSearchParams();
+    queryParams.append("langCode", langCode);
+    if (surahno) queryParams.append("surahno", surahno);
+    if (ayathno) queryParams.append("ayathno", ayathno);
+    if (searchText) queryParams.append("text", searchText);
+
+    // Redirect to same page with query params (Triggers Dust.js filtering)
+    window.location.search = queryParams.toString();
+});
+
+
+	function showIndex (langCode, surahno){
+				var surahno = parseInt(surahno);
+				var langCode = langCode;
+
+			var tafsirIndex ='tafsirIndex.html?langCode=' + langCode;				
+			var tafsirurl = 'tafsir.html?langCode=' + langCode;
+
+			if(surahno >1){
+
+				document.getElementById('prev').innerHTML = '<a href="'+ tafsirurl + '&surahno='+ (surahno-1) +'"><<< முந்தைய அத்தியாயம் </a>';
+			}
+
+			if(surahno < 114){
+				document.getElementById('next').innerHTML = '<a href="'+ tafsirurl + '&surahno='+ (surahno +1 ) +'"> அடுத்த அத்தியாயம் >>> </a>';
+			}
+
+			document.getElementById('breadcrumb').innerHTML = '&nbsp;  <a href="{{ site.baseurl }}/"> முகப்பு </a>' +  '--> &nbsp;  <a href="'+ tafsirIndex+'"> அத்தியாயங்கள் </a>';
+						
+	}
+
+</script>
+
