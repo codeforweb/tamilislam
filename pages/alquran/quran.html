@@ -97,14 +97,14 @@ layout: default
 
 						if(surahno >1){
 
-							document.getElementById('prev').innerHTML = '<a href="'+ quranurl + '&surahno='+ (surahno-1) +'"><<< முந்தைய அத்தியாயம் </a>';
+							document.getElementById('prev').innerHTML = '<a href="'+ quranurl + '&surahno='+ (surahno-1) +'">⬅ முந்தைய அத்தியாயம் </a>';
 						}
 
 						if(surahno < 114){
-							document.getElementById('next').innerHTML = '<a href="'+ quranurl + '&surahno='+ (surahno +1 ) +'"> அடுத்த அத்தியாயம் >>> </a>';
+							document.getElementById('next').innerHTML = '<a href="'+ quranurl + '&surahno='+ (surahno +1 ) +'"> அடுத்த அத்தியாயம் ➔ </a>';
 						}
 
-						document.getElementById('breadcrumb').innerHTML = '&nbsp;  <a href="{{ site.baseurl }}/"> முகப்பு </a>' +  '--> &nbsp;  <a href="'+ quranindex+'"> அத்தியாயங்கள் </a>';
+						document.getElementById('breadcrumb').innerHTML = '&nbsp;  <a href="{{ site.baseurl }}/"> ⟰ முகப்பு </a>' +  '➔ &nbsp;  <a href="'+ quranindex+'"> ☪ அத்தியாயங்கள் </a>';
 						
 				  	});
 	}

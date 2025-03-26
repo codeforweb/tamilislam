@@ -196,7 +196,7 @@ document.getElementById("searchForm").addEventListener("submit", function (event
                 }
 
             }
-            document.getElementById('breadcrumb').innerHTML = '&nbsp;  <a href="{{ site.baseurl }}/">' + homeLabel + '</a>' +  '--> &nbsp;  <a href="'+ tafsirIndex+'">' + indexLabel + ' </a>';
+            document.getElementById('breadcrumb').innerHTML = '&nbsp;  <a href="{{ site.baseurl }}/">' + homeLabel + '</a>' +  '➔ &nbsp;  <a href="'+ tafsirIndex+'">' + indexLabel + ' </a>';
 
             if(prevLink) document.getElementById('prev').innerHTML = `<a href="${prevLink}">${prevLabel}</a>`
             if(nextLink) document.getElementById('next').innerHTML = `<a href="${nextLink}">${nextLabel}</a>`
