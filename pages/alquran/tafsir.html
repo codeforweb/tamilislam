@@ -50,6 +50,8 @@ layout: default
 		<td style="border:0px;"> <h2><span id="breadcrumb"></a></span> </h2> </td>
 		<td style="border:0px;" width="25%"><span id="next">&nbsp; </span></td>
 	</tr>
+
+    <nav id="navigation" aria-label="breadcrumb"></nav>
 		
 	</table>
 
@@ -106,7 +108,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
  	// if(!ayathno && !searchText) surahno=1;	//default to first surah if there is no search
 
-	showIndex (langCode, surahno)
+	showIndex (langCode, surahno, ayathno)
 
     let filteredData = jsonData;
     // 1. Match surah number (if provided)
@@ -163,24 +165,41 @@ document.getElementById("searchForm").addEventListener("submit", function (event
 });
 
 
-	function showIndex (langCode, surahno){
-				var surahno = parseInt(surahno);
-				var langCode = langCode;
+	function showIndex (langCode, surahno, ayathno){
+			var surahno = parseInt(surahno);
+            var ayathno = parseInt(ayathno);
 
-			var tafsirIndex ='tafsirIndex.html?langCode=' + langCode;				
-			var tafsirurl = 'tafsir.html?langCode=' + langCode;
+            var tafsirIndex ='tafsirIndex.html?langCode=' + langCode;               
+            var tafsirUrl = 'tafsir.html?langCode=' + langCode;
+            
+            let prevLink,nextLink
 
-			if(surahno >1){
+            let prevLabel='⬅ Previous',nextLabel='Next ➔',homeLabel='⟰ Home',indexLabel='☪ Chapter Index';
+            if(langCode==='ta'){
+                prevLabel='⬅ முந்தையது';
+                nextLabel='அடுத்தது ➔';
+                homeLabel='⟰ முகப்பு';
+                indexLabel='☪ அத்தியாயங்கள்';
+            }
 
-				document.getElementById('prev').innerHTML = '<a href="'+ tafsirurl + '&surahno='+ (surahno-1) +'"><<< முந்தைய அத்தியாயம் </a>';
-			}
+            //No ayathNumber passed
+            if(surahno){
+                if(ayathno) {
+                    let prevAyah = ayathno > 1 ? ayathno - 1 : null;
+                    prevLink = prevAyah ? `${tafsirUrl}&surahno=${surahno}&ayathno=${prevAyah}` : null;
+                    nextLink = `${tafsirUrl}&surahno=${surahno}&ayathno=${ayathno + 1}`;
+                }else{
+                    let prevSurah = surahno > 1 ? surahno - 1 : null;
+                    let nextSurah = surahno < 114 ? surahno + 1 : null
+                    prevLink = prevSurah ? `${tafsirUrl}&surahno=${prevSurah}` : null;
+                    nextLink = nextSurah ? `${tafsirUrl}&surahno=${nextSurah}` : null;                    
+                }
 
-			if(surahno < 114){
-				document.getElementById('next').innerHTML = '<a href="'+ tafsirurl + '&surahno='+ (surahno +1 ) +'"> அடுத்த அத்தியாயம் >>> </a>';
-			}
+            }
+            document.getElementById('breadcrumb').innerHTML = '&nbsp;  <a href="{{ site.baseurl }}/">' + homeLabel + '</a>' +  '--> &nbsp;  <a href="'+ tafsirIndex+'">' + indexLabel + ' </a>';
 
-			document.getElementById('breadcrumb').innerHTML = '&nbsp;  <a href="{{ site.baseurl }}/"> முகப்பு </a>' +  '--> &nbsp;  <a href="'+ tafsirIndex+'"> அத்தியாயங்கள் </a>';
-						
+            if(prevLink) document.getElementById('prev').innerHTML = `<a href="${prevLink}">${prevLabel}</a>`
+            if(nextLink) document.getElementById('next').innerHTML = `<a href="${nextLink}">${nextLabel}</a>`
 	}
 
 </script>
