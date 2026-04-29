@@ -141,3 +141,10 @@
 :root:lang(iw) .select select {
   padding: .75em .75em .75em 2em;
 }
+
+@media (max-width: 768px) {
+  .select {
+    width: 100%;
+    max-width: 100%;
+  }
+}

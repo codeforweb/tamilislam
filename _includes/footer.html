@@ -3,11 +3,32 @@
 </footer>
 
 <script type="text/javascript">
+(function () {
+  var btn = document.getElementById('sidebutton');
+  var content = document.querySelector('.content');
+  if (!btn || !content) return;
 
-  document.getElementById('sidebutton').onclick = function(e){
- 		var element = document.getElementsByClassName("content")[0];
-  	element.classList.toggle("isOpen");
-  	return false;
+  function setMenuOpen(open) {
+    content.classList.toggle('isOpen', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    document.body.classList.toggle('menu-open', open);
   }
 
+  btn.addEventListener('click', function (e) {
+    e.preventDefault();
+    setMenuOpen(!content.classList.contains('isOpen'));
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && content.classList.contains('isOpen')) {
+      setMenuOpen(false);
+    }
+  });
+
+  window.addEventListener('resize', function () {
+    if (window.matchMedia('(min-width: 769px)').matches) {
+      setMenuOpen(false);
+    }
+  });
+})();
 </script>

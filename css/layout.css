@@ -9,6 +9,15 @@
 
 /*See https://fontawesome.com/v4.7.0/icons/*/
 
+:root {
+  --sidebar-width: 220px;
+  --content-bg: #f7f5f2;
+  --content-fg: #1a1a1a;
+  --sidebar-bg: #243447;
+  --sidebar-border: #1a2836;
+  --accent: #0f766e;
+}
+
 *, *:before, *:after {
   margin: 0;
   padding: 0;
@@ -16,7 +25,8 @@
 }
 
 html, body {
-  height: 100vh;
+  min-height: 100%;
+  min-height: 100dvh;
 }
 
 html {
@@ -30,70 +40,145 @@ html::-webkit-scrollbar-thumb {background: #ff69b4;}
 
 
 body {
-  font-family: 'Noto Serif Tamil, Noto Sans Tamil, Latha,Helmet, Atkinson Hyperlegible, Freesans,Helvetica,Arial,sans-serif';
-  color: #333;
-  background: #333;
+  font-family: "Noto Serif Tamil", "Noto Sans Tamil", Latha, "Atkinson Hyperlegible", Helvetica, Arial, sans-serif;
+  color: var(--content-fg);
+  background: #2a3544;
   overflow-x: hidden;
 }
 
 .wrapper {
   display: flex;
   min-height: 100%;
+  min-height: 100dvh;
+  position: relative;
 }
 
 .sidebar {
   position: absolute;
-  width: 220px;
+  left: 0;
+  top: 0;
+  width: var(--sidebar-width);
+  min-height: 100%;
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--sidebar-border);
 }
 
 .content {
   flex: 1;
   padding: 30px;
-  background: #eee;
-  box-shadow: 0 0 5px black;
+  padding: 30px max(30px, env(safe-area-inset-right)) 30px max(30px, env(safe-area-inset-left));
+  background: var(--content-bg);
+  color: var(--content-fg);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
   transform: translate3d(0, 0, 0);
-  transition: transform .3s;
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 100%;
 }
 
 .content.isOpen {
-  transform: translate3d(220px, 0, 0);
+  transform: translate3d(var(--sidebar-width), 0, 0);
 }
 
 a.button {
   cursor: pointer;
-  padding: 12px 26px;
-  content: '\f0c9';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  min-height: 48px;
+  padding: 8px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--content-fg);
+  background: rgba(15, 118, 110, 0.08);
+  transition: background 0.2s ease, color 0.2s ease;
+}
 
+a.button:hover {
+  background: rgba(15, 118, 110, 0.15);
 }
 
 a.button:focus {
-  outline: 1px dashed red;
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+a.button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+a.button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .button:before {
   content: '\f0c9';
-  font: 42px fontawesome;
+  font: 28px FontAwesome;
+}
+
+.content-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.toolbar-title {
+  margin: 0;
+  font-size: clamp(1.1rem, 4vw, 1.35rem);
+  font-weight: 600;
+  text-align: left;
+  flex: 1;
+  min-width: 0;
+}
+
+h1.page-title {
+  margin: 12px 0 20px;
+  font-size: clamp(1.25rem, 4.5vw, 1.75rem);
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.35;
 }
 
 /* Demo Navigation */
 .title {
-  font-size: 21px;
-  line-height: 50px;
+  position: relative;
+  font-size: clamp(1rem, 3.5vw, 1.15rem);
+  line-height: 1.3;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 7px;
-  color: #eee;
-  border-bottom: 1px solid #222;
-  background: #2a2a2a;
+  letter-spacing: 0.12em;
+  color: #f1f5f9;
+  border-bottom: 1px solid var(--sidebar-border);
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px 8px;
+}
+
+.title a {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
 }
 
 .nav li a {
   position: relative;
   display: block;
-  padding: 20px 0 20px 50px;
-  font-size: 21px;
-  color: #eee;
-  border-bottom: 1px solid #222;
+  padding: 16px 12px 16px 48px;
+  font-size: clamp(1rem, 3.2vw, 1.15rem);
+  line-height: 1.4;
+  color: #e2e8f0;
+  border-bottom: 1px solid var(--sidebar-border);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .nav li a:before {
@@ -142,8 +227,8 @@ a.button:focus {
 }
 
 .nav li a.active {
-  box-shadow: inset 5px 0 0 #5b5, inset 6px 0 0 #222;
-  background: #444;
+  box-shadow: inset 4px 0 0 var(--accent);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .title a:before{
@@ -174,9 +259,9 @@ h2 {
 .pagelist li {margin-top: 20px; }
 .pagelist ul{line-height:180%}
 
-.tamil {font-size: 14pt;line-height : 1.6em }
-.tamil1 {font-size: 14pt;line-height : 1.6em }
-.arabic {text-align: right; direction: rtl; unicode-bidi: embed;font-size: 25px;}
+.tamil { font-size: clamp(15px, 3.6vw, 18px); line-height: 1.65; }
+.tamil1 { font-size: clamp(15px, 3.6vw, 18px); line-height: 1.65; }
+.arabic { text-align: right; direction: rtl; unicode-bidi: embed; font-size: clamp(1.25rem, 5vw, 1.55rem); line-height: 1.5; }
 .arabic1 {font-size: 18px;}
 .notes li{border:0px;font-size: 8pt;}
 .hide{display:none}
@@ -284,35 +369,148 @@ input[type=text]:focus {
     transition: 0s
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
-  .sidebar {
-    width: 20px;
-    display: none;
-  }
-.content {
-  flex: 1;
-  padding: 10px;
-  }
-.nav ul{line-height:180%}
-.pagelist ul{line-height:180%}
+footer {
+  text-align: center;
+  padding: 16px 12px calc(16px + env(safe-area-inset-bottom));
+  font-size: 0.875rem;
+  color: #94a3b8;
+  background: #1e293b;
+}
 
+@media (max-width: 768px) {
+  :root {
+    --sidebar-width: min(288px, 86vw);
+  }
+
+  body.menu-open {
+    overflow: hidden;
+    touch-action: none;
+  }
+
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    width: var(--sidebar-width);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.2);
+  }
+
+  .content {
+    z-index: 2;
+    padding: 16px max(16px, env(safe-area-inset-right)) 24px max(16px, env(safe-area-inset-left));
+    padding-top: max(16px, env(safe-area-inset-top));
+    box-shadow: none;
+    border-radius: 0;
+    min-height: 100dvh;
+  }
+
+  .button:before {
+    font-size: 24px;
+  }
+
+  h1 {
+    font-size: clamp(1.2rem, 5vw, 1.5rem);
+  }
+
+  .nav ul {
+    line-height: 1.65;
+  }
+
+  .pagelist ul {
+    line-height: 1.65;
+  }
+
+  .pagelist li {
+    margin-top: 14px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .searchBtn {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  #tblcontainer {
+    display: block;
+  }
+
+  .tblrow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 8px;
+    padding: 10px 0;
+    border-bottom: 1px dotted #333;
+  }
+
+  .left,
+  .right,
+  .middle,
+  .ayath,
+  .number {
+    display: block;
+    width: 100% !important;
+    border: none;
+    padding: 8px 4px;
+  }
+
+  .ayath {
+    font-size: clamp(1rem, 3.5vw, 1.15rem);
+  }
+
+  #searchForm select,
+  #searchForm input {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 769px) {
+  body.menu-open {
+    overflow: visible;
+    touch-action: auto;
+  }
 }
 
 #searchForm legend {
-            font-size: 1.2em;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 10px;
-        }
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 #searchForm label {
-            font-weight: bold;
-            margin-top: 10px;
-        }
- #searchForm select, input {
-            width: 30%;
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1em;
-        }               
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+@media (min-width: 769px) {
+  #searchForm select,
+  #searchForm input[type="text"],
+  #searchForm input:not([type]) {
+    width: 30%;
+    max-width: 360px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+}
