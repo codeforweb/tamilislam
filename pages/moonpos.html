@@ -94,7 +94,7 @@ layout: default
         </tr>
     </table>
 
-    <img id="pic" width="500" height="500" />
+    <p id="pic">Moon image disabled for offline use. The calculated moon data below is local.</p>
     <table cellpadding="5" cellspacing="0" id="CalcTable" border="1">
         <tr>
             <td></td>
@@ -293,11 +293,6 @@ layout: default
                     document.getElementById(`Quarter${i}`).innerText = QuarterName[mq.quarter];
                 }
 
-                var x = Math.trunc((phase * 2) + 502);
-                var z = String(x).padStart(4, '0');
-                // console.log('img', z,mq.quarter, phase)
-                var img = "https://svs.gsfc.nasa.gov/vis/a000000/a005000/a005048/frames/730x730_1x1_30p/moon." + z + ".jpg";
-                document.getElementById('pic').src = img;
             }
 
             setTimeout(UpdateScreen, 1000);

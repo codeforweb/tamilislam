@@ -9,25 +9,40 @@ layout: default
 
 		pre {font-family: courier, serif, size: 10pt; margin: 0px 8px;}
 		input {width:250px; font-size: 20px;}
-		.header {background:#aaccee; border-bottom: 1px solid #ddd; padding: 7px; margin-left: 50px;}
+		.header {background:#aaccee; border-bottom: 1px solid #ddd; padding: 7px;}
 		.caption {font-size: 20px; color: #d95722; text-align: center; width: 10em;}
 		.arrow {font-weight: bold; text-decoration: none; color: #3D3D3D; }
 		.arrow:hover {text-decoration: underline;}
 		.command {font-weight: bold; text-decoration: none; color: #AAAAAA; }
 		.command:hover {text-decoration: underline;}
-		.timetable {width: 70%;  border-width: 1px; border-style: outset; border-collapse: collapse; border-color: gray;}
+		.timetable {width: 100%; max-width: 100%; border-width: 1px; border-style: outset; border-collapse: collapse; border-color: gray;}
 		.timetable td {border-width: 1px; border-spacing: 1px; padding: 1px; border-style: inset; border-color: #CCCCCC;}
 		.head-row {color: black; background-color: #eef;}
 		.today-row {background-color: lightyellow;color: black;font-weight: bolder;}
 		.center {margin: 0 auto;}
-		.left1{ margin-left: 50px ;}
+		.month-nav {margin: 0 auto;}
+		.table-scroll {overflow-x: auto; max-width: 100%; -webkit-overflow-scrolling: touch;}
+		.city-presets {margin-top: 10px;}
+		.city-presets span {margin-right: 6px;}
+		.city-btn {
+			margin: 4px 6px 4px 0;
+			padding: 6px 12px;
+			font-size: 15px;
+			border: 1px solid #7a9fc4;
+			border-radius: 4px;
+			background: #fff;
+			color: #3D3D3D;
+			cursor: pointer;
+		}
+		.city-btn:hover {background: #e8f0f8;}
+		.city-btn.active {background: #d95722; color: #fff; border-color: #b84518;}
 		table.timetable td:nth-child(3), 
 		table.timetable th:nth-child(3) {
 		    color: red;
 		}	
 
-#timetable1 {border-width: 1px; border-style: outset; border-collapse: collapse; border-color: blue; width: 70%}
-#timetable1 td, #timetable th {border-width: 1px; border-spacing: 1px; padding: 2px 4px; border-style: inset; border-color: blue;}
+#timetable1 {border-width: 1px; border-style: outset; border-collapse: collapse; border-color: blue; width: 100%; max-width: 100%;}
+#timetable1 td, #timetable1 th {border-width: 1px; border-spacing: 1px; padding: 2px 4px; border-style: inset; border-color: blue; white-space: nowrap;}
 #timetable1 th {color:black; text-align: center; font-weight: bold; background-color: #F8F7F4;}
 
   
@@ -42,12 +57,20 @@ layout: default
 	Latitude: <input type="text"  id="latitude" size="2" onchange="displayMonth(0)" />&nbsp;
 	Longitude: <input type="text"  id="longitude" size="2" onchange="displayMonth(0)" />&nbsp;&nbsp;&nbsp;
 
- 	<fieldset style="width: 500px; display: inline;">
+ 	<fieldset style="max-width: 100%; display: inline;">
  		<legend style="display: inline;">Asr </legend>
  		<input type="radio" name="juristic" id="standard" value="Standard"  checked="" onchange="displayDay();displayMonth(0)"> <label for="standard">Standard </label>
  		<input type="radio" name="juristic" id="hanafi" value="Hanafi"  onchange="displayDay();displayMonth(0)"> <label for="standard">Hanafi </label>
  	</fieldset>
- 	  <button id="clearSession">Clear Location</button>
+ 	  <button type="button" id="clearSession">Clear Location</button>
+
+	<div class="city-presets">
+		<span>Cities:</span>
+		<button type="button" class="city-btn" data-city="Chennai">Chennai</button>
+		<button type="button" class="city-btn" data-city="Madurai">Madurai</button>
+		<button type="button" class="city-btn" data-city="Trichy">Trichy</button>
+		<button type="button" class="city-btn" data-city="Bangalore">Bangalore</button>
+	</div>
 
 <!-- 	Method: 
 	<select id="method" size="1" style="font-size: 12px;" onchange="update()">
@@ -63,7 +86,7 @@ layout: default
 </div>
 <br/>
 
-<table class="left1">
+<table class="month-nav">
 <tr>
 	<td><a href="javascript:displayMonth(-1)" class="arrow">&lt;&lt;</a></td>
 	<td id="table-title" class="caption"></td>
@@ -72,35 +95,70 @@ layout: default
 </table>
 
 <br/>
-<div align="" id="dailyTimetable" style="margin-left:100px">
+<div class="table-scroll" id="dailyTimetable">
 </div>
 
 <br/>
-<table id="timetable" class="timetable left1">
+<div class="table-scroll">
+<table id="timetable" class="timetable">
 	<tbody></tbody>
 </table>
+</div>
 
 
 <br/><br/>
 
 
-<div id="map" style="margin-left: 100px"></div>
+<div id="map"></div>
 
 <script type="text/javascript">
 
 var currentDate = new Date();
-var timeFormat = 1; 
+var timeFormat = 1;
+
+const CITIES = {
+	Chennai: { lat: 13.0827, long: 80.2707 },
+	Madurai: { lat: 9.9252, long: 78.1198 },
+	Trichy: { lat: 10.7905, long: 78.7047 },
+	Bangalore: { lat: 12.9716, long: 77.5946 }
+};
+
+function setLocation(lat, long, city) {
+	$('latitude').value = lat;
+	$('longitude').value = long;
+	sessionStorage.setItem('coords', JSON.stringify({ lat, long }));
+	if (city) {
+		sessionStorage.setItem('selectedCity', city);
+	} else {
+		sessionStorage.removeItem('selectedCity');
+	}
+	updateCityButtons();
+	displayDay();
+	displayMonth(0);
+}
+
+function selectCity(city) {
+	const coords = CITIES[city];
+	if (coords) {
+		setLocation(coords.lat, coords.long, city);
+	}
+}
+
+function updateCityButtons() {
+	const selected = sessionStorage.getItem('selectedCity');
+	document.querySelectorAll('.city-btn').forEach(btn => {
+		btn.classList.toggle('active', btn.dataset.city === selected);
+	});
+}
 
 window.onload = async () => {
 
 	const getCoords = async () => {
-	    // Check if sessionStorage already has coordinates
 	    const storedCoords = sessionStorage.getItem("coords");
 	    if (storedCoords) {
 	        return JSON.parse(storedCoords);
 	    }
 
-	    // If not, get the location
 	    const pos = await new Promise((resolve, reject) => {
 	        navigator.geolocation.getCurrentPosition(resolve, reject);
 	    });
@@ -110,29 +168,34 @@ window.onload = async () => {
 	        lat: pos.coords.latitude,
 	    };
 
-	    // Store coordinates in sessionStorage
 	    sessionStorage.setItem("coords", JSON.stringify(coords));
 	    return coords;
 	};
 
-	const coords = await getCoords();
-	// console.table(coords)
-	$('latitude').value = coords.lat
-	$('longitude').value = coords.long
+	try {
+		const coords = await getCoords();
+		$('latitude').value = coords.lat;
+		$('longitude').value = coords.long;
+	} catch (e) {
+		// Geolocation unavailable; user can pick a city or enter coordinates manually
+	}
 
+	updateCityButtons();
 	displayDay();
 	displayMonth(0);
 
-	//Map
-	const htm ='<iframe width="70%" height="400px" frameborder="0" src="https://maps.google.com/maps?q=' + coords.lat +','+ coords.long+'&hl=en&z=14&amp;output=embed" style="border:0" allowfullscreen></iframe>';
-	$('map').innerHTML=  htm;
+	$('map').innerHTML = '<p>Pick a city or allow location access to calculate prayer times on this device.</p>';
 
+	document.querySelectorAll('.city-btn').forEach(btn => {
+		btn.addEventListener('click', () => selectCity(btn.dataset.city));
+	});
 
-    //Clear session storage
     document.getElementById('clearSession').addEventListener('click', () => {
         sessionStorage.removeItem("coords");
+        sessionStorage.removeItem("selectedCity");
         document.getElementById('latitude').value = "";
         document.getElementById('longitude').value = "";
+        updateCityButtons();
     });	
 }
 	const displayDay=()=>{

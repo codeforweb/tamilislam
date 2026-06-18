@@ -3,3 +3,8 @@ _site/
 .DS_Store
 .ruby-version
 .jekyll-cache
+node_modules/
+www/
+android/.gradle/
+android/app/build/
+android/build/
